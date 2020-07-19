@@ -1,84 +1,86 @@
 /////////////////////////////////
 // Main Colors
 /////////////////////////////////
+:root {
+  /* Base Colors */
+  --color-white: hsl(190,17%,93%);
+  --color-off-white: hsl(190,11%,90%);
 
-/* Base Colors */
-$color-white: hsl(190,17%,93%);
-$color-off-white: hsl(190,11%,90%);
+  --color-black: hsl(223,10%,13%);
+  --color-off-black: hsl(223,10%,16%);
 
-$color-black: hsl(223,10%,13%);
-$color-off-black: hsl(223,10%,16%);
+  --color-gray: hsl(224,11%,27%);
+  --color-gray-light: hsl(224,5%,45%);
+  --color-gray-xlight: hsl(190,5%,79%);
 
-$color-gray: hsl(224,11%,27%);
-$color-gray-light: hsl(224,5%,45%);
-$color-gray-xlight: hsl(190,5%,79%);
+  /* Primary Colors */
+  --color-purple: hsl(260,40%,26%);
+  --color-purple--night: hsl(260,39%,34%);
+  --color-purple-glow--night: hsl(260,80%,50%);
+  --color-pink: hsl(355,87%,66%);
+  --color-pink--night: hsl(355,92%,66%);
+  --color-pink-glow--night: hsl(355,87%,62%);
 
-/* Primary Colors */
-$color-purple: hsl(260,40%,26%);
-$color-purple--night: hsl(260,39%,34%);
-$color-purple-glow--night: hsl(260,80%,50%);
-$color-pink: hsl(355,87%,66%);
-$color-pink--night: hsl(355,92%,66%);
-$color-pink-glow--night: hsl(355,87%,62%);
+  /////////////////////////////////
+  // Color Usage
+  /////////////////////////////////
 
+  /* Backgrounds */
+  --color-far-background: var(--color-black);
+  --color-background: var(--color-white);
+  --color-background--night: var(--color-off-black);
 
-/////////////////////////////////
-// Color Usage
-/////////////////////////////////
+  /* Text */
+  --color-text-main: var(--color-black);
+  --color-text-main--night: var(--color-white);
 
-/* Backgrounds */
-$color-far-background: $color-black;
-$color-background: $color-white;
-$color-background--night: $color-off-black;
+  /* Buttons */
+  --color-button-main-bg: var(--color-black);
+  --color-button-main-bg--night: var(--color-black);
+  --color-button-main-text: var(--color-white);
+  --color-button-main-text--night: var(--color-white);
 
-/* Text */
-$color-text-main: $color-white;
-$color-text-main--night: $color-black;
+  /* Cards */
+  --color-card-bg: var(--color-off-white);
+  --color-card-bg--night: var(--color-black);
 
-/* Buttons */
-$color-button-main-bg: $color-black;
-$color-button-main-bg--night: $color-black;
-$color-button-main-text: $color-white;
-$color-button-main-text--night: $color-white;
+  /* Tag Pills */
+  --color-tag-pills-bg: var(--color-black);
+  --color-tag-pills-bg--night: var(--color-gray);
+  --color-tag-pills-text: var(--color-white);
+  --color-tag-pills-text--night: var(--color-white);
 
-/* Cards */
-$color-card-bg: $color-off-white;
-$color-card-bg--night: $color-black;
+  /* Forms */
+  --color-form-field-stroke: var(--color-gray-xlight);
+  --color-form-field-stroke--night: var(--color-gray-light);
+  --color-form-labels: var(--color-gray);
+  --color-form-labels--night: var(--color-gray-xlight);
+  --color-form-values: var(--color-black);
+  --color-form-values--night: var(--color-white);
 
-/* Tag Pills */
-$color-tag-pills-bg: $color-black;
-$color-tag-pills-bg--night: $color-gray;
-$color-tag-pills-text: $color-white;
-$color-tag-pills-text--night: $color-white;
+  /* Social Icons */
+  --color-social-icons: var(--color-gray-light);
 
-/* Forms */
-$color-form-field-stroke: $color-gray-xlight;
-$color-form-field-stroke--night: $color-gray-light;
-$color-form-labels: $color-gray;
-$color-form-labels--night: $color-gray-xlight;
-$color-form-values: $color-black;
-$color-form-values--night: $color-white;
+  /* Footer Text */
+  --color-footer-text: var(--color-gray-light);
 
-/* Social Icons */
-$color-social-icons: $color-gray-light;
+  /* Brand Colors */
+  --color-brand-primary: var(--color-pink);
+  --color-brand-primary--night: var(--color-pink--night);
+  --color-brand-primary--glow: var(--color-pink-glow--night);
+  --color-brand-secondary: var(--color-purple);
+  --color-brand-secondary--night: var(--color-purple--night);
+  --color-brand-secondary--glow: var(--color-purple-glow--night);
 
-/* Footer Text */
-$color-footer-text: $color-gray-light;
-
-/* Brand Colors */
-$color-brand-primary: $color-pink;
-$color-brand-primary--night: $color-pink--night;
-$color-brand-primary--glow: $color-pink-glow--night;
-$color-brand-secondary: $color-purple;
-$color-brand-secondary--night: $color-purple--night;
-$color-brand-secondary--glow: $color-purple-glow--night;
-
-
+}
 
 
 body {
-  background-color: $color-background;
-  // @media (prefers-color-scheme: dark) {
-  //   background-color: $background-night;
-  // }
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  @include night-mode {
+    background-color: var(--color-background--night);
+    color: var(--color-text-main--night);
+  }
+  
 }
