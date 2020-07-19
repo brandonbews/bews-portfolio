@@ -1,0 +1,32 @@
+.site-header {
+
+}
+.site-header__identity {
+
+}
+.site-header__logo {
+  svg {
+    #logo-gradient {
+      --logo-gradient-primary: var(--color-brand-primary);
+      --logo-gradient-secondary: var(--color-brand-secondary);
+      @include night-mode {
+        --logo-gradient-primary: var(--color-brand-primary--night);
+        --logo-gradient-secondary: var(--color-brand-secondary--night);
+      }
+    }
+    path {
+      fill: url(#logo-gradient) #fff;
+    }
+  }
+}
+.site-header__brandon-bews {
+
+}
+.site-header__nav {
+  &--closed {
+    display: none;
+  }
+}
+.mobile-nav-toggle {
+
+}
