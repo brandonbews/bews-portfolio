@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => (
     </div>
     <div class="site-header__nav">
       <ul>
-        <li><a href="#">My Projects Test</a></li>
+        <li><a href="#">My Projects</a></li>
         <li><a href="#">Get in Touch</a></li>
       </ul>
     </div>
