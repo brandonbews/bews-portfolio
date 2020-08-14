@@ -18,3 +18,14 @@ html {
     background-size: 100% 8px;
   }
 }
+
+/*Create Body*/
+html {
+  background-color: var(--color-far-background);
+  padding: $spacer-1;
+}
+
+body {
+  border-radius: $spacer-4;
+  padding: $spacer-4;
+}

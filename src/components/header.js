@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => (
         <line x1="17" y1="24" x2="31" y2="24" stroke="#1E2025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
-    <div class="site-header__nav">
+    <div class="site-header__nav" id="main-navigation">
       <ul>
         <li><a href="#">My Projects</a></li>
         <li><a href="#">Get in Touch</a></li>

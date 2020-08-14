@@ -78,9 +78,9 @@
 body {
   background-color: var(--color-background);
   color: var(--color-text-main);
-  @include night-mode {
-    background-color: var(--color-background--night);
-    color: var(--color-text-main--night);
-  }
+  // @include night-mode {
+  //   background-color: var(--color-background--night);
+  //   color: var(--color-text-main--night);
+  // }
   
 }
