@@ -16,25 +16,29 @@ body {
 $type-base-size: 1.125rem;
 $type-multiplier: 1.25;
 
-
 /////////////////////////////////
 // Font Sizes + Line Heights
 //
-// NOTE: Font size and line-heights are manually matched up to corresponding body and headline line-heights to preserve 0.25rem baseline grid. 
+// NOTE: Font size and line-heights are manually matched up to corresponding body and headline line-heights to preserve 0.25rem baseline grid.
 /////////////////////////////////
 
 /* Font Sizes */
-$font-size-xsmall: $type-base-size / $type-multiplier / $type-multiplier;   //Typically 11.52px
-$font-size-small: $type-base-size / $type-multiplier;    //Typically 14.4px
-$font-size-base: $type-base-size;  //Typically 18px
-$font-size-medium: $type-base-size * $type-multiplier;    //Typically 22.5px
-$font-size-large: $type-base-size * $type-multiplier * $type-multiplier;    //Typically 28.13px
-$font-size-xlarge: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier;   //Typically 35.16px
-$font-size-xxlarge: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier;   //Typically 43.95px
-$font-size-xxxlarge: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier;   //Typically 54.94px
-$font-size-poster: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier;   //Typically 68.66px
-$font-size-xposter: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier;   //Typically 85.83px
-$font-size-xxposter: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier;   //Typically 107.29px
+$font-size-xsmall: $type-base-size / $type-multiplier / $type-multiplier; //Typically 11.52px
+$font-size-small: $type-base-size / $type-multiplier; //Typically 14.4px
+$font-size-base: $type-base-size; //Typically 18px
+$font-size-medium: $type-base-size * $type-multiplier; //Typically 22.5px
+$font-size-large: $type-base-size * $type-multiplier * $type-multiplier; //Typically 28.13px
+$font-size-xlarge: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier; //Typically 35.16px
+$font-size-xxlarge: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier *
+  $type-multiplier; //Typically 43.95px
+$font-size-xxxlarge: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier *
+  $type-multiplier * $type-multiplier; //Typically 54.94px
+$font-size-poster: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier *
+  $type-multiplier * $type-multiplier * $type-multiplier; //Typically 68.66px
+$font-size-xposter: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier *
+  $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier; //Typically 85.83px
+$font-size-xxposter: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier *
+  $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier; //Typically 107.29px
 
 /* UI Line-Heights */
 $ui-line-height-xsmall: 0.75rem;
@@ -57,16 +61,16 @@ $ui-line-padding-xxlarge: 0.03125rem 0 0.46875rem 0;
 $ui-line-padding-xxxlarge: 0.0625rem 0 0.6875rem 0;
 
 /* Body Line Heights - 1.75 * Font-size, rounded to nearest divisible by 4 */
-$body-line-height-xsmall: 1.25rem; //20px
-$body-line-height-small: 1.5rem; 
-$body-line-height-base: 2rem;
+$body-line-height-xsmall: 1.25rem; // 20px
+$body-line-height-small: 1.5rem; //
+$body-line-height-base: 2rem; //
 $body-line-height-medium: 2.5rem;
 $body-line-height-large: 3rem;
 $body-line-height-xlarge: 3.75rem; //60px
 $body-line-height-xxlarge: 4.75rem; //76px
 $body-line-height-xxxlarge: 6rem;
-$body-line-height-poster: 7.5rem; 
-$body-line-height-xposter: 9.5rem; 
+$body-line-height-poster: 7.5rem;
+$body-line-height-xposter: 9.5rem;
 $body-line-height-xxposter: 11.75rem; //188px
 
 /* Headline Line Heights - 1.25 * Font-size, rounded to nearest divisible by 4 */
@@ -81,8 +85,6 @@ $headline-line-height-xxxlarge: 4.25rem;
 $headline-line-height-poster: 5.25rem;
 $headline-line-height-xposter: 6.75rem;
 $headline-line-height-xxposter: 8.5rem;
-
-
 
 /////////////////////////////////
 // Typography Mixins
