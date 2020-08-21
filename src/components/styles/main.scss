@@ -1,12 +1,13 @@
 /*--------------------
   Imports
 --------------------*/
-@import "media-queries";
-@import "colors";
-@import "typography";
-@import "spacing";
-@import "mixins";
-@import "basics";
+@import 'reset';
+@import 'media-queries';
+@import 'colors';
+@import 'typography';
+@import 'spacing';
+@import 'mixins';
+@import 'basics';
 
 /* Components */
-@import "header";
+@import 'header';
