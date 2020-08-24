@@ -1,3 +1,7 @@
+// Create Font Sizes
+$font-sizes: 11; //How many font sizes to produce
+$base-font-position: 3; //Position that should be the base font size. This is useful for creating sizes below the base size.
+
 :root {
   // Font Weights
   --fontWeightNormal: 400;
@@ -28,10 +32,6 @@
   // Create Font Sizes
   ////////////////////////
 
-  // Create Font Sizes
-  $font-sizes: 11; //How many font sizes to produce
-  $base-font-position: 3; //Position that should be the base font size. This is useful for creating sizes below the base size.
-
   // Create Base Font Size
   --fontSize#{$base-font-position}: var(--fontSizeBase);
 
@@ -43,7 +43,7 @@
 
   // Create font size below the base font size
   $base-font-position-loop: $base-font-position;
-  @while $base-font-position > 1 {
+  @while $base-font-position-loop > 1 {
     --fontSize#{$base-font-position - 1}: calc(
       var(--fontSize#{$base-font-position}) / var(--fontSizeRatio)
     );
@@ -94,4 +94,5 @@
 // Set global body font
 body {
   @include bodyFont($base-font-position);
+  font-family: var(--fontFamilyMain);
 }
