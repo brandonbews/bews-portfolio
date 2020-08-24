@@ -12,10 +12,8 @@ Adjust type system settings in \_typograhpy.scss
 
 ### Mixins to Create Font Sizes
 
-- **bodyFont(\$size)**
-- **titleFont(\$size)**
+- **bodyFont(\$size, [$font-weight])**
+- **titleFont(\$size, [$font-weight])**
   Headlines, titles, large copy
-- **uiFont(\$size)**
+- **uiFont(\$size, [$font-weight])**
   Title case UI elements
-- **uiFontUpper(\$size)**
-  Uppercase UI elements with a padding shim to better center text vertically

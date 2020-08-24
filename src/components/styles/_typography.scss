@@ -44,25 +44,28 @@ $base-font-position: 3; //Position that should be the base font size. This is us
   // Create font size below the base font size
   $base-font-position-loop: $base-font-position;
   @while $base-font-position-loop > 1 {
-    --fontSize#{$base-font-position - 1}: calc(
-      var(--fontSize#{$base-font-position}) / var(--fontSizeRatio)
+    --fontSize#{$base-font-position-loop - 1}: calc(
+      var(--fontSize#{$base-font-position-loop}) / var(--fontSizeRatio)
     );
     $base-font-position-loop: $base-font-position-loop - 1;
   }
 
   // Create Body Fonts
   @for $i from 1 through $font-sizes {
-    --bodyFont#{$i}: --fontWeightNormal var(--fontSize#{$i}) / var(--bodyLineHeight);
+    --bodyFont#{$i}: var(--fontWeightNormal)
+      var(--fontSize#{$i}) /
+      var(--bodyLineHeight)
+      var(--fontFamilyMain);
   }
 
   // Create Title Fonts
   @for $i from 1 through $font-sizes {
-    --titleFont#{$i}: var(--fontSize#{$i}) / var(--titleLineHeight);
+    --titleFont#{$i}: var(--fontSize#{$i}) / var(--titleLineHeight) var(--fontFamilyMain);
   }
 
   // Create UI Fonts
   @for $i from 1 through $font-sizes {
-    --uiFont#{$i}: var(--fontSize#{$i}) / var(--uiLineHeight);
+    --uiFont#{$i}: var(--fontSize#{$i}) / var(--uiLineHeight) var(--fontFamilyMain);
   }
 }
 
@@ -71,24 +74,27 @@ $base-font-position: 3; //Position that should be the base font size. This is us
 ////////////////////////
 
 // Create a title font of a specific size
-@mixin bodyFont($size) {
-  font: var(--bodyFont#{$size});
+@mixin bodyFont($size, $font-family: null) {
+  font: var(--bodyFont#{$size}) $font-family;
+  @if ($font-family) {
+    font-family: $font-family;
+  }
 }
 
-@mixin titleFont($size) {
-  font: var(--titleFont#{$size});
+@mixin titleFont($size, $font-family: null) {
+  font: var(--titleFont#{$size}) $font-family;
+  @if ($font-family) {
+    font-family: $font-family;
+  }
 }
 
 // Create a ui font of a specific size
-@mixin uiFont($size) {
-  font: var(--uiFont#{$size});
-}
-
-// Create an uppercase ui font of a specific size
-@mixin uiFontUpper($size) {
-  font: var(--uiFont#{$size});
-  padding-bottom: var(--uiUppercaseFontNormalize);
-  text-transform: uppercase;
+@mixin uiFont($size, $font-family: null) {
+  font: var(--uiFont#{$size}) $font-family;
+  padding-bottom: var(--uiFontUpperNormalize);
+  @if ($font-family) {
+    font-family: $font-family;
+  }
 }
 
 // Set global body font
