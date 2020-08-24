@@ -1,8 +1,6 @@
 .site-header {
-
 }
 .site-header__identity {
-
 }
 .site-header__logo {
   svg {
@@ -20,7 +18,6 @@
   }
 }
 .site-header__brandon-bews {
-
 }
 .site-header__nav {
   &--closed {
@@ -28,5 +25,8 @@
   }
 }
 .mobile-nav-toggle {
+}
 
+.fakecssRule {
+  position: abolute;
 }

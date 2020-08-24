@@ -1,201 +1,97 @@
-/////////////////////////////////
-// Fonts
-/////////////////////////////////
+:root {
+  // Font Weights
+  --fontWeightNormal: 400;
+  --fontWeightBold: 700;
+  --fontWeightBlack: 900;
 
-/* Variables */
-$font-main: 'sofia-pro', Helvetica, sans-serif;
+  ////////////////////////
+  // Settings
+  ////////////////////////
 
+  // Font Family
+  --fontFamilyMain: 'sofia-pro', Helvetica, sans-serif;
+
+  // Font Size
+  --fontSizeBase: 1.125rem;
+  --fontSizeRatio: 1.25;
+
+  // Line Heights
+  --bodyLineHeight: 1.75;
+  --titleLineHeight: 1.25;
+  --uiLineHeight: 1;
+
+  // UI Line Height Normalize
+  // This is a bottom padding that can be tweaked on a font by font basis to better optically center capitalized UI copy within a line height
+  --uiFontUpperNormalize: 0.13em;
+
+  ////////////////////////
+  // Create Font Sizes
+  ////////////////////////
+
+  // Create Font Sizes
+  $font-sizes: 11; //How many font sizes to produce
+  $base-font-position: 3; //Position that should be the base font size. This is useful for creating sizes below the base size.
+
+  // Create Base Font Size
+  --fontSize#{$base-font-position}: var(--fontSizeBase);
+
+  // Generate font size variables ( 'fontSize1, fontSize2, etc.' )
+  $font-size-start: $base-font-position + 1;
+  @for $i from $font-size-start through $font-sizes {
+    --fontSize#{$i}: calc(var(--fontSize#{$i - 1}) * var(--fontSizeRatio));
+  }
+
+  // Create font size below the base font size
+  $base-font-position-loop: $base-font-position;
+  @while $base-font-position > 1 {
+    --fontSize#{$base-font-position - 1}: calc(
+      var(--fontSize#{$base-font-position}) / var(--fontSizeRatio)
+    );
+    $base-font-position-loop: $base-font-position-loop - 1;
+  }
+
+  // Create Body Fonts
+  @for $i from 1 through $font-sizes {
+    --bodyFont#{$i}: --fontWeightNormal var(--fontSize#{$i}) / var(--bodyLineHeight);
+  }
+
+  // Create Title Fonts
+  @for $i from 1 through $font-sizes {
+    --titleFont#{$i}: var(--fontSize#{$i}) / var(--titleLineHeight);
+  }
+
+  // Create UI Fonts
+  @for $i from 1 through $font-sizes {
+    --uiFont#{$i}: var(--fontSize#{$i}) / var(--uiLineHeight);
+  }
+}
+
+////////////////////////
+// Mixins to Use Font Sizes
+////////////////////////
+
+// Create a title font of a specific size
+@mixin bodyFont($size) {
+  font: var(--bodyFont#{$size});
+}
+
+@mixin titleFont($size) {
+  font: var(--titleFont#{$size});
+}
+
+// Create a ui font of a specific size
+@mixin uiFont($size) {
+  font: var(--uiFont#{$size});
+}
+
+// Create an uppercase ui font of a specific size
+@mixin uiFontUpper($size) {
+  font: var(--uiFont#{$size});
+  padding-bottom: var(--uiUppercaseFontNormalize);
+  text-transform: uppercase;
+}
+
+// Set global body font
 body {
-  font-family: $font-main;
-}
-
-/////////////////////////////////
-// Base and multiplier
-/////////////////////////////////
-
-$type-base-size: 1.125rem;
-$type-multiplier: 1.25;
-
-/////////////////////////////////
-// Font Sizes + Line Heights
-//
-// NOTE: Font size and line-heights are manually matched up to corresponding body and headline line-heights to preserve 0.25rem baseline grid.
-/////////////////////////////////
-
-/* Font Sizes */
-$font-size-xsmall: $type-base-size / $type-multiplier / $type-multiplier; //Typically 11.52px
-$font-size-small: $type-base-size / $type-multiplier; //Typically 14.4px
-$font-size-base: $type-base-size; //Typically 18px
-$font-size-medium: $type-base-size * $type-multiplier; //Typically 22.5px
-$font-size-large: $type-base-size * $type-multiplier * $type-multiplier; //Typically 28.13px
-$font-size-xlarge: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier; //Typically 35.16px
-$font-size-xxlarge: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier *
-  $type-multiplier; //Typically 43.95px
-$font-size-xxxlarge: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier *
-  $type-multiplier * $type-multiplier; //Typically 54.94px
-$font-size-poster: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier *
-  $type-multiplier * $type-multiplier * $type-multiplier; //Typically 68.66px
-$font-size-xposter: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier *
-  $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier; //Typically 85.83px
-$font-size-xxposter: $type-base-size * $type-multiplier * $type-multiplier * $type-multiplier *
-  $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier * $type-multiplier; //Typically 107.29px
-
-/* UI Line-Heights */
-$ui-line-height-xsmall: 0.75rem;
-$ui-line-height-small: 1rem;
-$ui-line-height-base: 1.25rem;
-$ui-line-height-medium: 1.5rem;
-$ui-line-height-large: 2rem;
-$ui-line-height-xlarge: 2.25rem;
-$ui-line-height-xxlarge: 2.75rem;
-$ui-line-height-xxxlarge: 3.5rem;
-
-/* UI Line-Height Shims - Manual values to vertically center text within line height */
-$ui-line-padding-xsmall: 0.203125rem 0 0.296875rem 0;
-$ui-line-padding-small: 0.1875rem 0 0.3125rem 0;
-$ui-line-padding-base: 0.15625rem 0 0.34375rem 0;
-$ui-line-padding-medium: 0.125rem 0 0.375rem 0;
-$ui-line-padding-large: 0.09375rem 0 0.40625rem 0;
-$ui-line-padding-xlarge: 0.0625rem 0 0.4375rem 0;
-$ui-line-padding-xxlarge: 0.03125rem 0 0.46875rem 0;
-$ui-line-padding-xxxlarge: 0.0625rem 0 0.6875rem 0;
-
-/* Body Line Heights - 1.75 * Font-size, rounded to nearest divisible by 4 */
-$body-line-height-xsmall: 1.25rem; // 20px
-$body-line-height-small: 1.5rem; //
-$body-line-height-base: 2rem; //
-$body-line-height-medium: 2.5rem;
-$body-line-height-large: 3rem;
-$body-line-height-xlarge: 3.75rem; //60px
-$body-line-height-xxlarge: 4.75rem; //76px
-$body-line-height-xxxlarge: 6rem;
-$body-line-height-poster: 7.5rem;
-$body-line-height-xposter: 9.5rem;
-$body-line-height-xxposter: 11.75rem; //188px
-
-/* Headline Line Heights - 1.25 * Font-size, rounded to nearest divisible by 4 */
-$headline-line-height-xsmall: 1rem; //16px
-$headline-line-height-small: 1.25rem;
-$headline-line-height-base: 1.5rem;
-$headline-line-height-medium: 1.75rem;
-$headline-line-height-large: 2.25rem;
-$headline-line-height-xlarge: 2.75rem; //44px
-$headline-line-height-xxlarge: 3.5rem;
-$headline-line-height-xxxlarge: 4.25rem;
-$headline-line-height-poster: 5.25rem;
-$headline-line-height-xposter: 6.75rem;
-$headline-line-height-xxposter: 8.5rem;
-
-/////////////////////////////////
-// Typography Mixins
-/////////////////////////////////
-
-/* Create font size */
-@mixin create-font-size($font-size, $line-height) {
-  font-size: $font-size;
-  line-height: $line-height;
-}
-
-/* Body Fonts */
-@mixin font-body-1 {
-  @include create-font-size($font-size-xsmall, $body-line-height-xsmall);
-}
-@mixin font-body-2 {
-  @include create-font-size($font-size-small, $body-line-height-small);
-}
-@mixin font-body-3 {
-  @include create-font-size($font-size-base, $body-line-height-base);
-}
-@mixin font-body-4 {
-  @include create-font-size($font-size-medium, $body-line-height-medium);
-}
-@mixin font-body-5 {
-  @include create-font-size($font-size-large, $body-line-height-large);
-}
-@mixin font-body-6 {
-  @include create-font-size($font-size-xlarge, $body-line-height-xlarge);
-}
-@mixin font-body-7 {
-  @include create-font-size($font-size-xxlarge, $body-line-height-xxlarge);
-}
-@mixin font-body-8 {
-  @include create-font-size($font-size-xxxlarge, $body-line-height-xxxlarge);
-}
-@mixin font-body-9 {
-  @include create-font-size($font-size-poster, $body-line-height-poster);
-}
-@mixin font-body-10 {
-  @include create-font-size($font-size-xposter, $body-line-height-xposter);
-}
-@mixin font-body-11 {
-  @include create-font-size($font-size-xxposter, $body-line-height-xxposter);
-}
-
-/* Headlines */
-@mixin font-head-1 {
-  @include create-font-size($font-size-xsmall, $headline-line-height-xsmall);
-}
-@mixin font-head-2 {
-  @include create-font-size($font-size-small, $headline-line-height-small);
-}
-@mixin font-head-3 {
-  @include create-font-size($font-size-base, $headline-line-height-base);
-}
-@mixin font-head-4 {
-  @include create-font-size($font-size-medium, $headline-line-height-medium);
-}
-@mixin font-head-5 {
-  @include create-font-size($font-size-large, $headline-line-height-large);
-}
-@mixin font-head-6 {
-  @include create-font-size($font-size-xlarge, $headline-line-height-xlarge);
-}
-@mixin font-head-7 {
-  @include create-font-size($font-size-xxlarge, $headline-line-height-xxlarge);
-}
-@mixin font-head-8 {
-  @include create-font-size($font-size-xxxlarge, $headline-line-height-xxxlarge);
-}
-@mixin font-head-9 {
-  @include create-font-size($font-size-poster, $headline-line-height-poster);
-}
-@mixin font-head-10 {
-  @include create-font-size($font-size-xposter, $headline-line-height-xposter);
-}
-@mixin font-head-11 {
-  @include create-font-size($font-size-xxposter, $headline-line-height-xxposter);
-}
-
-/* UI Fonts */
-@mixin font-ui-1 {
-  @include create-font-size($font-size-xsmall, $ui-line-height-xsmall);
-  padding: $ui-line-padding-xsmall;
-}
-@mixin font-ui-2 {
-  @include create-font-size($font-size-small, $ui-line-height-small);
-  padding: $ui-line-padding-small;
-}
-@mixin font-ui-3 {
-  @include create-font-size($font-size-base, $ui-line-height-base);
-  padding: $ui-line-padding-base;
-}
-@mixin font-ui-4 {
-  @include create-font-size($font-size-medium, $ui-line-height-medium);
-  padding: $ui-line-padding-medium;
-}
-@mixin font-ui-5 {
-  @include create-font-size($font-size-large, $ui-line-height-large);
-  padding: $ui-line-padding-large;
-}
-@mixin font-ui-6 {
-  @include create-font-size($font-size-xlarge, $ui-line-height-xlarge);
-  padding: $ui-line-padding-xlarge;
-}
-@mixin font-ui-7 {
-  @include create-font-size($font-size-xxlarge, $ui-line-height-xxlarge);
-  padding: $ui-line-padding-xxlarge;
-}
-@mixin font-ui-8 {
-  @include create-font-size($font-size-xxxlarge, $ui-line-height-xxxlarge);
-  padding: $ui-line-padding-xxxlarge;
+  @include bodyFont($base-font-position);
 }

@@ -3,22 +3,6 @@ html {
   font-size: 16px;
 }
 
-* {
-  box-sizing: border-box;
-  //Optional baseline grid for development
-  &.baseline-grid {
-    background:
-    linear-gradient(
-      to bottom,
-      #edc5c5,
-      #edc5c5 50%,
-      #ffffff 50%,
-      #ffffff
-    );
-    background-size: 100% 8px;
-  }
-}
-
 /*Create Body*/
 html {
   background-color: var(--color-far-background);
