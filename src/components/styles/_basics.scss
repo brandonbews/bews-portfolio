@@ -5,11 +5,11 @@ html {
 
 /*Create Body*/
 html {
-  background-color: var(--color-far-background);
-  padding: $spacer-1;
+  background-color: var(--colorFarBackground);
+  padding: var(--spacer1);
 }
 
 body {
-  border-radius: $spacer-4;
-  padding: $spacer-4;
+  border-radius: var(--spacer4);
+  padding: var(--spacer5);
 }

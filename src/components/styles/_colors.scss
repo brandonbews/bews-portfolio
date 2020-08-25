@@ -3,84 +3,81 @@
 /////////////////////////////////
 :root {
   /* Base Colors */
-  --color-white: hsl(190,17%,93%);
-  --color-off-white: hsl(190,11%,90%);
+  --colorWhite: hsl(190, 17%, 93%);
+  --colorOffWhite: hsl(190, 11%, 90%);
 
-  --color-black: hsl(223,10%,13%);
-  --color-off-black: hsl(223,10%,16%);
+  --colorBlack: hsl(223, 10%, 13%);
+  --colorOffBlack: hsl(223, 10%, 16%);
 
-  --color-gray: hsl(224,11%,27%);
-  --color-gray-light: hsl(224,5%,45%);
-  --color-gray-xlight: hsl(190,5%,79%);
+  --colorGray: hsl(224, 11%, 27%);
+  --colorGrayLight: hsl(224, 5%, 45%);
+  --colorGrayXlight: hsl(190, 5%, 79%);
 
   /* Primary Colors */
-  --color-purple: hsl(260,40%,26%);
-  --color-purple--night: hsl(260,39%,34%);
-  --color-purple-glow--night: hsl(260,80%,50%);
-  --color-pink: hsl(355,87%,66%);
-  --color-pink--night: hsl(355,92%,66%);
-  --color-pink-glow--night: hsl(355,87%,62%);
+  --colorPurple: hsl(260, 40%, 26%);
+  --colorPurple--night: hsl(260, 39%, 34%);
+  --colorPurpleGlow--night: hsl(260, 80%, 50%);
+  --colorPink: hsl(355, 87%, 66%);
+  --colorPink--night: hsl(355, 92%, 66%);
+  --colorPinkGlow--night: hsl(355, 87%, 62%);
 
   /////////////////////////////////
   // Color Usage
   /////////////////////////////////
 
   /* Backgrounds */
-  --color-far-background: var(--color-black);
-  --color-background: var(--color-white);
-  --color-background--night: var(--color-off-black);
+  --colorFarBackground: var(--colorBlack);
+  --colorBackground: var(--colorWhite);
+  --colorBackground--night: var(--colorOffBlack);
 
   /* Text */
-  --color-text-main: var(--color-black);
-  --color-text-main--night: var(--color-white);
+  --colorTextMain: var(--colorBlack);
+  --colorTextMain--night: var(--colorWhite);
 
   /* Buttons */
-  --color-button-main-bg: var(--color-black);
-  --color-button-main-bg--night: var(--color-black);
-  --color-button-main-text: var(--color-white);
-  --color-button-main-text--night: var(--color-white);
+  --colorButtonMainBg: var(--colorBlack);
+  --colorButtonMainBg--night: var(--colorBlack);
+  --colorButtonMainText: var(--colorWhite);
+  --colorButtonMainText--night: var(--colorWhite);
 
   /* Cards */
-  --color-card-bg: var(--color-off-white);
-  --color-card-bg--night: var(--color-black);
+  --colorCardBg: var(--colorOffWhite);
+  --colorCardBg--night: var(--colorBlack);
 
   /* Tag Pills */
-  --color-tag-pills-bg: var(--color-black);
-  --color-tag-pills-bg--night: var(--color-gray);
-  --color-tag-pills-text: var(--color-white);
-  --color-tag-pills-text--night: var(--color-white);
+  --colorTagPillsBg: var(--colorBlack);
+  --colorTagPillsBg--night: var(--colorGray);
+  --colorTagPillsText: var(--colorWhite);
+  --colorTagPillsText--night: var(--colorWhite);
 
   /* Forms */
-  --color-form-field-stroke: var(--color-gray-xlight);
-  --color-form-field-stroke--night: var(--color-gray-light);
-  --color-form-labels: var(--color-gray);
-  --color-form-labels--night: var(--color-gray-xlight);
-  --color-form-values: var(--color-black);
-  --color-form-values--night: var(--color-white);
+  --colorFormFieldStroke: var(--colorGrayXlight);
+  --colorFormFieldStroke--night: var(--colorGrayLight);
+  --colorFormLabels: var(--colorGray);
+  --colorFormLabels--night: var(--colorGrayXlight);
+  --colorFormValues: var(--colorBlack);
+  --colorFormValues--night: var(--colorWhite);
 
   /* Social Icons */
-  --color-social-icons: var(--color-gray-light);
+  --colorSocialIcons: var(--colorGrayLight);
 
   /* Footer Text */
-  --color-footer-text: var(--color-gray-light);
+  --colorFooterText: var(--colorGrayLight);
 
   /* Brand Colors */
-  --color-brand-primary: var(--color-pink);
-  --color-brand-primary--night: var(--color-pink--night);
-  --color-brand-primary--glow: var(--color-pink-glow--night);
-  --color-brand-secondary: var(--color-purple);
-  --color-brand-secondary--night: var(--color-purple--night);
-  --color-brand-secondary--glow: var(--color-purple-glow--night);
-
+  --colorBrandPrimary: var(--colorPink);
+  --colorBrandPrimary--night: var(--colorPink--night);
+  --colorBrandPrimary--glow: var(--colorPinkGlow--night);
+  --colorBrandSecondary: var(--colorPurple);
+  --colorBrandSecondary--night: var(--colorPurple--night);
+  --colorBrandSecondary--glow: var(--colorPurpleGlow--night);
 }
 
-
 body {
-  background-color: var(--color-background);
-  color: var(--color-text-main);
+  background-color: var(--colorBackground);
+  color: var(--colorTextMain);
   // @include night-mode {
-  //   background-color: var(--color-background--night);
-  //   color: var(--color-text-main--night);
+  //   background-color: var(--colorBackground--night);
+  //   color: var(--colorTextMain--night);
   // }
-  
 }
