@@ -32,11 +32,6 @@ const NavToggle = (props) => {
       { duration: 0.15, ease: 'power3.ease', attr: { x1: '7', y1: '25', x2: '25', y2: '7' } },
       '<'
     )
-    navToggleTimeline.current.to(
-      [navToggleLine1, navToggleLine2, navToggleLine3],
-      { duration: 0.15, ease: 'power3.ease', attr: { stroke: '#ffffff' } },
-      '<'
-    )
   }, [])
 
   useEffect(() => {
@@ -46,7 +41,10 @@ const NavToggle = (props) => {
   }, [navState])
 
   return (
-    <button className="mobile-nav-toggle" onClick={() => setNavState(!navState)}>
+    <button
+      className={`mobile-nav-toggle ${navState ? 'mobile-nav-toggle--close' : ''}`}
+      onClick={() => setNavState(!navState)}
+    >
       <svg
         className="mobile-nav-toggle__svg"
         width={32}

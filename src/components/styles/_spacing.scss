@@ -15,4 +15,14 @@
   --spacer11: calc(1rem * 7.5);
   --spacer12: calc(1rem * 9.5);
   --spacer13: calc(1rem * 11.5);
+
+  --paddingGlobalWrap: var(--spacer2);
+  --paddingSectionWrap: var(--spacer5);
+  --paddingTotalWrap: calc(var(--paddingGlobalWrap) + var(--paddingSectionWrap));
+
+  //Testing media queries
+  @media (min-width: 1000px) {
+    --paddingGlobalWrap: var(--spacer8);
+    --paddingSectionWrap: var(--spacer6);
+  }
 }

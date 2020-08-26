@@ -1,20 +1,24 @@
-/*Establish baseline for all measurements*/
-html {
-  font-size: 16px;
-}
-
 /*Create Body*/
 html {
+  font-size: 16px;
   background-color: var(--colorFarBackground);
-  padding: var(--spacer1);
+  padding: var(--paddingGlobalWrap);
 }
 
 body {
   border-radius: var(--spacer4);
-  padding: var(--spacer5);
-  // position: relative;
+  background-color: var(--colorBackground);
+  box-shadow: var(--shadowBoxMain);
+  color: var(--colorTextMain);
+}
+@include night-mode {
+  body {
+    background-color: var(--colorBackground--night);
+    color: var(--colorTextMain--night);
+  }
 }
 
+//Fix iOS Safari Button Flash
 button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

@@ -72,12 +72,3 @@
   --colorBrandSecondary--night: var(--colorPurple--night);
   --colorBrandSecondary--glow: var(--colorPurpleGlow--night);
 }
-
-body {
-  background-color: var(--colorBackground);
-  color: var(--colorTextMain);
-  // @include night-mode {
-  //   background-color: var(--colorBackground--night);
-  //   color: var(--colorTextMain--night);
-  // }
-}

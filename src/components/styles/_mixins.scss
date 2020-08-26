@@ -1,0 +1,12 @@
+@mixin night-mode {
+  /*   @media (prefers-color-scheme: light) {
+    @content;
+  } */
+  .body--night {
+    @content;
+  }
+}
+
+@mixin section-padding {
+  padding: var(--paddingSectionWrap);
+}
