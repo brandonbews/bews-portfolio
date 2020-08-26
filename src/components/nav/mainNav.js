@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import NavContent from './navContent.js'
-import NavToggle from './navtoggle.js'
+import NavToggle from './navToggle.js'
 
 const MainNav = () => {
   const [navState, setNavState] = useState(false)

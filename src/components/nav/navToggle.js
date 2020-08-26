@@ -42,7 +42,7 @@ const NavToggle = (props) => {
   useEffect(() => {
     navState
       ? navToggleTimeline.current.timeScale(1).play()
-      : navToggleTimeline.current.timeScale(2).reverse()
+      : navToggleTimeline.current.timeScale(1).reverse()
   }, [navState])
 
   return (
