@@ -14,3 +14,7 @@ body {
   padding: var(--spacer5);
   // position: relative;
 }
+
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
