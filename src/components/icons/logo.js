@@ -4,8 +4,8 @@ const Logo = () => (
   <svg width="21" height="32" viewBox="0 0 21 32" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="logo-gradient" gradientTransform="rotate(90)">
-        <stop offset="0%" stop-color="var(--logo-gradient-secondary" />
-        <stop offset="100%" stop-color="var(--logo-gradient-primary)" />
+        <stop offset="0%" stopColor="var(--logoGradientSecondary" />
+        <stop offset="100%" stopColor="var(--logoGradientPrimary)" />
       </linearGradient>
     </defs>
     <path
