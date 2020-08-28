@@ -21,29 +21,19 @@ const NavContent = (props) => {
       duration: 0,
       display: 'block',
     })
-    mainNavTimelineOpen.current.to(mainNav, {
-      duration: 0,
-      x: '-100%',
-    })
-    mainNavTimelineOpen.current.to(mainNav, {
-      duration: 0,
-      ease: 'power3.ease',
-      x: '0',
-      backgroundColor: 'rgba(30,32,37,0.0)',
-    })
     mainNavTimelineOpen.current.to(
       mainNav,
       { duration: 0.15, ease: 'power3.ease', delay: 0.15, backgroundColor: 'rgba(30,32,37,0.8)' },
       '<'
     )
-    mainNavTimelineOpen.current.to(
+    mainNavTimelineOpen.current.from(
       mainNavContent,
-      { duration: 0.25, ease: 'power3.ease', x: '0' },
+      { duration: 0.15, ease: 'power3.ease', delay: 0.15, opacity: 0, y: '-50' },
       '<'
     )
     mainNavTimelineOpen.current.from(
       [mainNavItem1, mainNavItem2, mainNavItem3],
-      { duration: 0.35, ease: 'power3.ease', x: '-50', stagger: 0.05 },
+      { duration: 0.35, ease: 'power3.ease', y: '-50', stagger: 0.05 },
       '<'
     )
     mainNavTimelineOpen.current.from(

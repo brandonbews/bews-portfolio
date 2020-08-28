@@ -158,41 +158,42 @@
 //Mobile Nav Content
 .main-nav {
   display: none;
+  background-color: rgba(30, 32, 37, 0);
+  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
+  padding: 0 var(--paddingTotalWrap);
   z-index: 1;
   height: 100vh;
   width: 100%;
-  transform: translateX(-100%);
   &__content {
-    --paddingMainNav: var(--spacer11);
+    --paddingMainNav: var(--spacer8);
     background: var(--colorBlack);
-    border-bottom-right-radius: var(--spacer4);
-    border-top-right-radius: var(--spacer4);
+    border-radius: var(--spacer4);
     box-shadow: var(--shadowBoxMain);
-    left: 0;
-    padding: var(--paddingMainNav) 0;
-    position: absolute;
-    top: var(--paddingMainNav);
-    transform: translateX(-100%);
-    width: calc(100vw - var(--paddingMainNav));
-    z-index: 2;
+    padding: var(--paddingMainNav);
+    width: 100%;
     @include screen-xsmall-landscape {
-      padding: var(--spacer5) 0;
-      top: var(--spacer10);
+      padding: var(--spacer5);
+      margin-top: var(--spacer10);
+    }
+    @include screen-small {
+      margin-top: var(--spacer10);
     }
     @include screen-medium {
-      top: var(--spacer12);
-      width: calc(100vw - var(--spacer12));
+      margin-top: var(--spacer11);
+    }
+    @include screen-large {
+      margin-top: var(--spacer12);
+      margin-right: auto;
+      margin-left: auto;
+      width: 50%;
     }
     @include screen-xlarge {
-      width: calc(
-        calc(
-          calc(calc(calc(100vw - var(--globalMaxWidth)) / 2) + var(--globalMaxWidth)) -
-            calc(var(--spacer12) - var(--paddingSectionWrap))
-        )
-      );
+      max-width: calc(var(--globalMaxWidth) - calc(var(--paddingTotalWrap) * 2));
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   &__list {
@@ -202,7 +203,7 @@
     justify-content: center;
   }
   &__item {
-    @include uiFont(5);
+    @include uiFont(4);
     color: var(--colorWhite);
     font-weight: var(--fontWeightBold);
     margin-bottom: var(--spacer8);
