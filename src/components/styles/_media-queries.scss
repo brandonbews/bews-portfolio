@@ -1,0 +1,31 @@
+@mixin screen-xsmall-landscape {
+  @media (max-width: 340px), (max-height: 480px) {
+    @content;
+  }
+}
+
+@mixin screen-small {
+  @media (min-width: 21.25rem) {
+    @content;
+  }
+}
+
+@mixin screen-medium {
+  @media (min-width: 48rem) {
+    //768
+    @content;
+  }
+}
+
+@mixin screen-large {
+  @media (min-width: 64rem) {
+    //1024
+    @content;
+  }
+}
+
+@mixin screen-xlarge {
+  @media (min-width: 90rem) {
+    @content;
+  }
+}

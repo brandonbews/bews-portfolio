@@ -1,0 +1,9 @@
+.content-body {
+  padding-top: var(--spacer9);
+  @include screen-medium {
+    padding-top: var(--spacer10);
+  }
+  @include screen-large {
+    padding-top: var(--spacer11);
+  }
+}

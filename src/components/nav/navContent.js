@@ -19,6 +19,10 @@ const NavContent = (props) => {
     mainNavTimelineOpen.current = gsap.timeline({ paused: true })
     mainNavTimelineOpen.current.to(mainNav, {
       duration: 0,
+      display: 'block',
+    })
+    mainNavTimelineOpen.current.to(mainNav, {
+      duration: 0,
       x: '-100%',
     })
     mainNavTimelineOpen.current.to(mainNav, {
@@ -29,7 +33,7 @@ const NavContent = (props) => {
     })
     mainNavTimelineOpen.current.to(
       mainNav,
-      { duration: 0.15, ease: 'power3.ease', delay: 0.15, backgroundColor: 'rgba(30,32,37,0.9)' },
+      { duration: 0.15, ease: 'power3.ease', delay: 0.15, backgroundColor: 'rgba(30,32,37,0.8)' },
       '<'
     )
     mainNavTimelineOpen.current.to(
@@ -81,7 +85,7 @@ const NavContent = (props) => {
               <a href="#">About Me</a>
             </li>
             <li className="main-nav__item" ref={(el) => (mainNavItem3 = el)}>
-              <a href="#">Contact Me</a>
+              <a href="#">Contact</a>
             </li>
           </ul>
         </div>

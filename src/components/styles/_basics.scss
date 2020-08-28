@@ -6,16 +6,12 @@ html {
 }
 
 body {
-  border-radius: var(--spacer4);
+  border-radius: var(--radiusBase);
   background-color: var(--colorBackground);
   box-shadow: var(--shadowBoxMain);
   color: var(--colorTextMain);
-}
-@include night-mode {
-  body {
-    background-color: var(--colorBackground--night);
-    color: var(--colorTextMain--night);
-  }
+  margin: auto;
+  max-width: var(--globalMaxWidth);
 }
 
 //Fix iOS Safari Button Flash

@@ -20,9 +20,14 @@
   --paddingSectionWrap: var(--spacer5);
   --paddingTotalWrap: calc(var(--paddingGlobalWrap) + var(--paddingSectionWrap));
 
-  //Testing media queries
-  @media (min-width: 1000px) {
-    --paddingGlobalWrap: var(--spacer8);
-    --paddingSectionWrap: var(--spacer6);
+  --globalMaxWidth: 1440px;
+
+  //Media Queries
+  @include screen-medium {
+    --paddingGlobalWrap: var(--spacer6);
+    --paddingSectionWrap: var(--spacer7);
+  }
+  @include screen-large {
+    --paddingSectionWrap: var(--spacer8);
   }
 }
