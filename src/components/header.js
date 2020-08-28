@@ -12,7 +12,6 @@ const Header = ({ siteTitle }) => {
 
   const checkHeaderScroll = (startDistance) => {
     const distanceFromTop = siteHeader.current.getBoundingClientRect().top
-    console.log(window.scrollY)
     if (window.scrollY === 0) {
       siteHeaderWrap.current.classList.remove('site-header__wrap--detached')
     } else {
