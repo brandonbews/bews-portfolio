@@ -98,7 +98,7 @@ $base-font-position: 3; //Position that should be the base font size. This is us
 }
 
 // Set global body font
-body {
+.site-wrapper {
   @include bodyFont($base-font-position);
   font-family: var(--fontFamilyMain);
 }

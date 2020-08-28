@@ -2,10 +2,14 @@
 html {
   font-size: 16px;
   background-color: var(--colorFarBackground);
-  padding: var(--paddingGlobalWrap);
 }
 
 body {
+  background-color: var(--colorFarBackground);
+  padding: var(--paddingGlobalWrap);
+}
+
+.site-wrapper {
   border-radius: var(--radiusBase);
   background-color: var(--colorBackground);
   box-shadow: var(--shadowBoxMain);

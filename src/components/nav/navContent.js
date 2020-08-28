@@ -18,10 +18,6 @@ const NavContent = (props) => {
   //Nav animations
   useEffect(() => {
     mainNavTimelineOpen.current = gsap.timeline({ paused: true })
-    mainNavTimelineOpen.current.to(htmlElement, {
-      duration: 0,
-      overflow: 'hidden',
-    })
     mainNavTimelineOpen.current.to(mainNav, {
       duration: 0,
       display: 'block',
@@ -38,12 +34,12 @@ const NavContent = (props) => {
     )
     mainNavTimelineOpen.current.from(
       [mainNavItem1, mainNavItem2, mainNavItem3],
-      { duration: 0.35, ease: 'power3.ease', y: '-50', stagger: 0.05 },
+      { duration: 0.2, ease: 'power3.ease', y: '-50', stagger: 0.05 },
       '<'
     )
     mainNavTimelineOpen.current.from(
       [mainNavItem1, mainNavItem2, mainNavItem3],
-      { duration: 0.75, ease: 'power3.ease', opacity: '0', stagger: 0.1 },
+      { duration: 0.35, ease: 'power3.ease', opacity: '0', stagger: 0.1 },
       '<'
     )
   }, [])

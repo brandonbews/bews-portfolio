@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className="site-wrapper">
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
         {/* content-body is in use */}
         <main className="content-body">{children}</main>
       </div>
-    </>
+    </div>
   )
 }
 
