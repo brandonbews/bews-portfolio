@@ -13,7 +13,6 @@ const NavContent = (props) => {
   let mainNavItem2 = useRef(null)
   let mainNavItem3 = useRef(null)
   let mainNavTimelineOpen = useRef()
-  const htmlElement = document.querySelector('html')
 
   //Nav animations
   useEffect(() => {
@@ -54,8 +53,8 @@ const NavContent = (props) => {
   //Class to prevent overflow on html when nav is open
   useEffect(() => {
     navState
-      ? htmlElement.classList.add('html--overlay-open')
-      : htmlElement.classList.remove('html--overlay-open')
+      ? document.querySelector('html').classList.add('html--overlay-open')
+      : document.querySelector('html').classList.remove('html--overlay-open')
   }, [navState])
 
   //Detect click outside of nav when open
