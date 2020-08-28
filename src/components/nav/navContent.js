@@ -13,10 +13,15 @@ const NavContent = (props) => {
   let mainNavItem2 = useRef(null)
   let mainNavItem3 = useRef(null)
   let mainNavTimelineOpen = useRef()
+  const htmlElement = document.querySelector('html')
 
   //Nav animations
   useEffect(() => {
     mainNavTimelineOpen.current = gsap.timeline({ paused: true })
+    mainNavTimelineOpen.current.to(htmlElement, {
+      duration: 0,
+      overflow: 'hidden',
+    })
     mainNavTimelineOpen.current.to(mainNav, {
       duration: 0,
       display: 'block',
@@ -53,8 +58,8 @@ const NavContent = (props) => {
   //Class to prevent overflow on html when nav is open
   useEffect(() => {
     navState
-      ? document.querySelector('html').classList.add('html--overlay-open')
-      : document.querySelector('html').classList.remove('html--overlay-open')
+      ? htmlElement.classList.add('html--overlay-open')
+      : htmlElement.classList.remove('html--overlay-open')
   }, [navState])
 
   //Detect click outside of nav when open
