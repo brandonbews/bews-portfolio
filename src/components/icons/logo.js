@@ -8,40 +8,11 @@ const Logo = () => (
         <stop offset="100%" stopColor="var(--logoGradientPrimary)" />
       </linearGradient>
 
-      <linearGradient id="logo-glow-gradient" gradientTransform="rotate(90)">
-        <stop offset="0%" stopColor="rgba(95,26,229,0.35)" />
-        <stop offset="100%" stopColor="rgba(242,74,88,0.35)" />
-      </linearGradient>
-
-      <rect
-        id="glowRect"
-        height="50%"
-        y="25%"
-        x="20%"
-        width="20%"
-        fill="url(#logo-glow-gradient)"
-      />
-
       <filter id="inset-shadow">
         <feFlood flood-color="rgba(0,0,0,0.75)" />
         <feComposite operator="out" in2="SourceGraphic" />
         <feGaussianBlur stdDeviation="2" />
         <feComposite operator="atop" in2="SourceGraphic" />
-      </filter>
-
-      <filter id="inset-shadow--night" height="200%" width="500%" x="-100%" y="-50%">
-        <feFlood in="SourceGraphic" flood-color="rgba(0,0,0,0.65)" result="innerFlood" />
-        <feComposite operator="out" in="innerFlood" in2="SourceGraphic" result="comp1" />
-        <feGaussianBlur stdDeviation="2.5" in="comp1" result="blur1" />
-        <feComposite operator="atop" in="blur1" in2="SourceGraphic" result="comp2" />
-
-        <feImage xlinkHref="#glowRect" result="glow-rect" />
-        <feGaussianBlur in="glow-rect" stdDeviation="8" result="coloredBlur" />
-
-        <feMerge>
-          <feMergeNode in="coloredBlur" />
-          <feMergeNode in="comp2" />
-        </feMerge>
       </filter>
 
       <filter id="glow" height="200%" width="500%" x="-100%" y="-50%">

@@ -105,11 +105,6 @@
     }
   }
 }
-@include night-mode {
-  .site-header__logo svg .logo-path {
-    filter: url(#inset-shadow--night);
-  }
-}
 .site-header__brandon-bews {
   @include uiFont(2);
   font-weight: var(--fontWeightBold);
