@@ -92,6 +92,7 @@
   svg {
     height: var(--spacer6);
     width: auto;
+    overflow: visible;
     @include screen-large {
       height: var(--spacer7);
     }
@@ -102,6 +103,11 @@
     path {
       fill: url(#logo-gradient) #fff;
     }
+  }
+}
+@include night-mode {
+  .site-header__logo svg .logo-path {
+    filter: url(#inset-shadow--night);
   }
 }
 .site-header__brandon-bews {

@@ -21,4 +21,5 @@ body {
 //Fix iOS Safari Button Flash
 button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: 0;
 }
