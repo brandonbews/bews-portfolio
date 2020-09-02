@@ -11,16 +11,8 @@ const Logo = () => (
       <filter id="inset-shadow">
         <feFlood flood-color="rgba(0,0,0,0.75)" />
         <feComposite operator="out" in2="SourceGraphic" />
-        <feGaussianBlur stdDeviation="2" />
+        <feGaussianBlur stdDeviation="3" />
         <feComposite operator="atop" in2="SourceGraphic" />
-      </filter>
-
-      <filter id="glow" height="200%" width="500%" x="-100%" y="-50%">
-        <feGaussianBlur stdDeviation="5" result="coloredBlur" />
-        <feMerge>
-          <feMergeNode in="coloredBlur" />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
       </filter>
     </defs>
     <path
