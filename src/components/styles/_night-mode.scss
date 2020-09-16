@@ -1,17 +1,11 @@
-:root {
+html {
   @include night-mode {
-    /* Brand Colors */
-    --colorBrandPrimary: var(--colorBrandPrimary--night);
-    --colorBrandSecondary: var(--colorBrandSecondary--night);
-
-    /* Backgrounds */
-    --colorFarBackground: var(--colorBlack);
     --colorBackground: var(--colorBackground--night);
 
     /* Text */
     --colorTextMain: var(--colorTextMain--night);
 
     /* Shadows */
-    --shadowBoxMain: var(--shadowBoxMain--night);
+    --shadowBoxLight: var(--shadowBoxDark);
   }
 }

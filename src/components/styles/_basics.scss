@@ -2,6 +2,14 @@
 html {
   font-size: 16px;
   background-color: var(--colorFarBackground);
+
+  /* Add baseline transition */
+  * {
+    $baseline-transition: 0.25s ease;
+    transition: font-size $baseline-transition, width $baseline-transition,
+      height $baseline-transition, color $baseline-transition, background-color $baseline-transition,
+      border-color $baseline-transition, box-shadow $baseline-transition;
+  }
 }
 
 body {

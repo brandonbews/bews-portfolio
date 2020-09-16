@@ -1,8 +1,8 @@
 @mixin night-mode {
-  @media (prefers-color-scheme: dark) {
-    @content;
-  }
-  .html--night {
+  // @media (prefers-color-scheme: dark) {
+  //   @content;
+  // }
+  &.html--night {
     @content;
   }
 }

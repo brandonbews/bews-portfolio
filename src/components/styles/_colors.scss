@@ -4,71 +4,65 @@
 :root {
   /* Base Colors */
   --colorWhite: hsl(190, 17%, 93%);
-  --colorOffWhite: hsl(190, 11%, 90%);
 
-  --colorBlack: hsl(223, 10%, 13%);
-  --colorOffBlack: hsl(223, 10%, 16%);
+  --colorBlack: hsl(220, 11%, 16%);
 
-  --colorGray: hsl(224, 11%, 27%);
-  --colorGrayLight: hsl(224, 5%, 45%);
-  --colorGrayXlight: hsl(190, 5%, 79%);
+  --colorDarkBlack: hsl(223, 10%, 13%);
+
+  --colorGrayDark: hsl(222, 10%, 32%);
+  --colorGray: hsl(221, 10%, 48%);
+  --colorGrayLight: hsl(222, 10%, 60%);
+  --colorGrayXlight: hsl(225, 10%, 76%);
 
   /* Primary Colors */
-  --colorPurple: hsl(260, 40%, 26%);
-  --colorPurple--night: hsl(260, 39%, 34%);
-  --colorPurpleGlow--night: hsl(260, 80%, 50%);
-  --colorPink: hsl(355, 87%, 66%);
-  --colorPink--night: hsl(355, 92%, 66%);
-  --colorPinkGlow--night: hsl(355, 87%, 62%);
+  --colorBlueLight: hsl(184, 93%, 69%);
+  --colorBlueDark: hsl(204, 75%, 34%);
+  --colorGradientBrand: linear-gradient(135deg, hsl(184, 93%, 69%) 0%, hsl(204, 75%, 34%) 100%);
 
   /////////////////////////////////
   // Color Usage
   /////////////////////////////////
 
   /* Backgrounds */
-  --colorFarBackground: var(--colorBlack);
+  --colorFarBackground: var(--colorDarkBlack);
   --colorBackground: var(--colorWhite);
-  --colorBackground--night: var(--colorOffBlack);
+  --colorBackground--night: var(--colorBlack);
 
   /* Text */
   --colorTextMain: var(--colorBlack);
   --colorTextMain--night: var(--colorWhite);
 
   /* Buttons */
-  --colorButtonMainBg: var(--colorBlack);
-  --colorButtonMainBg--night: var(--colorBlack);
+  --colorButtonMainBg: var(--colorDarkBlack);
   --colorButtonMainText: var(--colorWhite);
-  --colorButtonMainText--night: var(--colorWhite);
 
   /* Cards */
-  --colorCardBg: var(--colorOffWhite);
+  --colorCardBg: var(--colorWhite);
   --colorCardBg--night: var(--colorBlack);
 
+  /* Cards Client Tag */
+  --colorCardClient: var(--colorGray);
+  --colorCardClient--night: var(--colorGrayLight);
+
   /* Tag Pills */
-  --colorTagPillsBg: var(--colorBlack);
-  --colorTagPillsBg--night: var(--colorGray);
+  --colorTagPillsBg: var(--colorGrayDark);
   --colorTagPillsText: var(--colorWhite);
-  --colorTagPillsText--night: var(--colorWhite);
 
   /* Forms */
   --colorFormFieldStroke: var(--colorGrayXlight);
-  --colorFormFieldStroke--night: var(--colorGrayLight);
-  --colorFormLabels: var(--colorGray);
-  --colorFormLabels--night: var(--colorGrayXlight);
+  --colorFormFieldStroke--night: var(--colorGrayDark);
+  --colorFormLabels: var(--colorGrayDark);
+  --colorFormLabels--night: var(--colorGrayXLight);
   --colorFormValues: var(--colorBlack);
   --colorFormValues--night: var(--colorWhite);
 
   /* Social Icons */
-  --colorSocialIcons: var(--colorGrayLight);
+  --colorSocialIcons: var(--colorGray);
 
   /* Footer Text */
-  --colorFooterText: var(--colorGrayLight);
+  --colorFooterText: var(--colorGray);
 
   /* Brand Colors */
-  --colorBrandPrimary: var(--colorPink);
-  --colorBrandPrimary--night: var(--colorPink--night);
-  --colorBrandPrimary--glow: var(--colorPinkGlow--night);
-  --colorBrandSecondary: var(--colorPurple);
-  --colorBrandSecondary--night: var(--colorPurple--night);
-  --colorBrandSecondary--glow: var(--colorPurpleGlow--night);
+  --colorBrandPrimary: var(--colorBlueLight);
+  --colorBrandSecondary: var(--colorBlueDark);
 }

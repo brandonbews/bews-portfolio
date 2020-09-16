@@ -38,7 +38,7 @@ const NavContent = (props) => {
     )
     mainNavTimelineOpen.current.from(
       [mainNavItem1, mainNavItem2, mainNavItem3],
-      { duration: 0.35, ease: 'power3.ease', opacity: '0', stagger: 0.1 },
+      { duration: 0.35, ease: 'power3.ease', opacity: 0, stagger: 0.1 },
       '<'
     )
   }, [])
@@ -65,7 +65,7 @@ const NavContent = (props) => {
 
   return (
     <nav className="main-nav" ref={(el) => (mainNav = el)}>
-      <div ref={navWrap}>
+      <div ref={navWrap} class="main-nav__content-wrap">
         <div className="main-nav__content" ref={(el) => (mainNavContent = el)}>
           <ul className="main-nav__list">
             <li className="main-nav__item" ref={(el) => (mainNavItem1 = el)}>

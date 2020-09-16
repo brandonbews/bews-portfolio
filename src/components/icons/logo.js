@@ -3,9 +3,9 @@ import React from 'react'
 const Logo = () => (
   <svg width="21" height="32" viewBox="0 0 21 32" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <linearGradient id="logo-gradient" gradientTransform="rotate(90)">
-        <stop offset="0%" stopColor="var(--logoGradientSecondary)" />
-        <stop offset="100%" stopColor="var(--logoGradientPrimary)" />
+      <linearGradient id="logo-gradient" gradientTransform="rotate(65)">
+        <stop offset="0%" stopColor="var(--logoGradientPrimary)" />
+        <stop offset="100%" stopColor="var(--logoGradientSecondary)" />
       </linearGradient>
 
       <filter id="inset-shadow">

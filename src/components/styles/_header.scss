@@ -14,6 +14,7 @@
   right: 0;
   top: 0;
   width: 100%;
+  z-index: 1;
   @include screen-medium {
     margin-bottom: calc(-1 * var(--spacer10));
     padding: calc(var(--paddingSectionWrap) - var(--spacer4));
@@ -39,8 +40,7 @@
   max-width: var(--globalMaxWidth);
   margin: auto;
   display: flex;
-  // @include section-padding;
-  transition: 0.25s box-shadow ease;
+  // transition: 0.25s box-shadow ease;
   padding: var(--spacer3) var(--spacer4);
   @include screen-medium {
     padding: var(--spacer4) var(--spacer5);
@@ -63,14 +63,7 @@
     padding-right: calc(var(--paddingTotalWrap) - var(--spacer5));
   }
   .site-header {
-    box-shadow: var(--shadowBoxMain);
-    // padding: var(--spacer3) var(--spacer4);
-    /*     @include screen-medium {
-      padding: var(--spacer4) var(--spacer5);
-    }
-    @include screen-large {
-      padding: var(--spacer5);
-    } */
+    box-shadow: var(--shadowBoxUpLight);
   }
 }
 .site-header__nav {
@@ -168,11 +161,17 @@
   z-index: 1;
   height: 100vh;
   width: 100%;
+  &__content-wrap {
+    @include screen-large {
+      width: 50vh;
+      margin: auto;
+    }
+  }
   &__content {
     --paddingMainNav: var(--spacer8);
     background: var(--colorBlack);
     border-radius: var(--spacer4);
-    box-shadow: var(--shadowBoxMain);
+    box-shadow: var(--shadowBoxNav);
     padding: var(--paddingMainNav);
     width: 100%;
     @include screen-xsmall-landscape {
@@ -187,9 +186,9 @@
     }
     @include screen-large {
       margin-top: var(--spacer12);
-      margin-right: auto;
-      margin-left: auto;
-      width: 50%;
+      // margin-right: auto;
+      // margin-left: auto;
+      // width: 100%;
     }
     @include screen-xlarge {
       max-width: calc(var(--globalMaxWidth) - calc(var(--paddingTotalWrap) * 2));
