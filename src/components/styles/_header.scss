@@ -125,15 +125,13 @@
 }
 .mobile-nav-toggle {
   .mobile-nav-toggle__svg {
-    --colorNavToggle: var(--colorBlack);
-    --colorNavToggleActive: var(--colorWhite);
     width: var(--spacer6);
     height: auto;
     @include screen-large {
       width: var(--spacer7);
     }
     line {
-      stroke: var(--colorNavToggle);
+      stroke: var(--colorNavToggleInactive);
       transition: stroke 0.35s ease;
     }
   }
@@ -141,11 +139,6 @@
 .mobile-nav-toggle--close {
   .mobile-nav-toggle__svg line {
     stroke: var(--colorNavToggleActive);
-  }
-}
-@include night-mode {
-  .mobile-nav-toggle .mobile-nav-toggle__svg {
-    --colorNavToggle: var(--colorWhite);
   }
 }
 
@@ -229,8 +222,4 @@
 //Mobile menu overlay lock scroll
 .html--overlay-open {
   overflow: hidden;
-}
-
-//Mobile nav on scroll
-.site-header__wrap {
 }

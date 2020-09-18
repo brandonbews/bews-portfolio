@@ -1,11 +1,23 @@
-html {
+@mixin night-mode {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+  &--night {
+    @content;
+  }
+}
+
+.site-wrapper {
   @include night-mode {
     --colorBackground: var(--colorBackground--night);
 
     /* Text */
     --colorTextMain: var(--colorTextMain--night);
 
-    /* Shadows */
-    --shadowBoxLight: var(--shadowBoxDark);
+    /* Main nav button */
+    --colorNavToggleInactive: var(--colorNavToggleInactive--night);
+
+    /* Nav Modal */
+    --shadowBoxNav: var(--shadowBoxNav--night);
   }
 }

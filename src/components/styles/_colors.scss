@@ -35,6 +35,9 @@
   /* Buttons */
   --colorButtonMainBg: var(--colorDarkBlack);
   --colorButtonMainText: var(--colorWhite);
+  --colorNavToggleInactive: var(--colorBlack);
+  --colorNavToggleInactive--night: var(--colorWhite);
+  --colorNavToggleActive: var(--colorWhite);
 
   /* Cards */
   --colorCardBg: var(--colorWhite);

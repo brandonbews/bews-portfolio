@@ -6,18 +6,18 @@ html {
   /* Add baseline transition */
   * {
     $baseline-transition: 0.25s ease;
-    transition: font-size $baseline-transition, width $baseline-transition,
-      height $baseline-transition, color $baseline-transition, background-color $baseline-transition,
+    transition: font-size $baseline-transition, height $baseline-transition,
+      color $baseline-transition, background-color $baseline-transition,
       border-color $baseline-transition, box-shadow $baseline-transition;
   }
 }
 
-body {
+.site-wrapper {
   background-color: var(--colorFarBackground);
   padding: var(--paddingGlobalWrap);
 }
 
-.site-wrapper {
+.site-wrapper__content {
   border-radius: var(--radiusBase);
   background-color: var(--colorBackground);
   box-shadow: var(--shadowBoxMain);
