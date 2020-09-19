@@ -102,3 +102,32 @@ $base-font-position: 3; //Position that should be the base font size. This is us
   @include bodyFont($base-font-position);
   font-family: var(--fontFamilyMain);
 }
+
+////////////////////////
+// Typography Basics
+////////////////////////
+h1,
+.h1 {
+  @include titleFont(7);
+  font-weight: var(--fontWeightBold);
+  margin-bottom: var(--spacer6);
+  margin-top: 0;
+}
+h2,
+.h2 {
+  @include titleFont(5);
+  font-weight: var(--fontWeightBold);
+  margin-bottom: var(--spacer4);
+  margin-top: var(--spacer8);
+}
+h3,
+.h3 {
+  @include titleFont(3);
+  font-weight: var(--fontWeightBlack);
+  text-transform: uppercase;
+  margin-bottom: var(--spacer4);
+  margin-top: var(--spacer8);
+}
+p {
+  margin-bottom: var(--spacer5);
+}
