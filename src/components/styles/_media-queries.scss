@@ -6,26 +6,33 @@
 
 $breakpoints: sm, md, lg, xl;
 
-@mixin screen-sm {
-  @media (min-width: 21.25rem) {
+//352px
+@mixin screen-xs {
+  @media (min-width: 22rem) {
     @content;
   }
 }
-
+//592px
+@mixin screen-sm {
+  @media (min-width: 37rem) {
+    @content;
+  }
+}
+//768px
 @mixin screen-md {
   @media (min-width: 48rem) {
     @content;
   }
 }
-
+//1024px
 @mixin screen-lg {
   @media (min-width: 64rem) {
     @content;
   }
 }
-
+//1376px
 @mixin screen-xl {
-  @media (min-width: 90rem) {
+  @media (min-width: 86rem) {
     @content;
   }
 }

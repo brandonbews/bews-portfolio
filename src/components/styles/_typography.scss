@@ -106,6 +106,8 @@ $base-font-position: 3; //Position that should be the base font size. This is us
 ////////////////////////
 // Typography Basics
 ////////////////////////
+$body-copy-max-width: 32rem;
+
 h1,
 .h1 {
   @include titleFont(7);

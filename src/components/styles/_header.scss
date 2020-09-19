@@ -172,7 +172,7 @@
       padding: var(--spacer5);
       margin-top: var(--spacer10);
     }
-    @include screen-sm {
+    @include screen-xs {
       margin-top: var(--spacer10);
     }
     @include screen-md {

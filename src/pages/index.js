@@ -6,46 +6,43 @@ import SEO from '../components/seo'
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div style={{ maxWidth: '500px', margin: 'auto', padding: '16px', marginTop: '36px' }}>
-      <p style={{ marginBottom: '24px' }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut leo lacus, aliquet ac sapien
-        nec, laoreet aliquam ligula. Ut faucibus justo felis, eget hendrerit neque auctor at.
-        Vivamus mattis ac odio vulputate gravida. Sed interdum dolor luctus maximus tincidunt.
-        Mauris fermentum euismod posuere. Nullam in nisi sit amet lacus malesuada hendrerit.
-        Pellentesque imperdiet lectus ipsum, et dignissim risus rhoncus at. Curabitur quis lorem
-        lacinia, tincidunt justo vel, tempor enim.
-      </p>
-      <p style={{ marginBottom: '24px' }}>
-        Nulla at vehicula metus, ut malesuada lorem. Praesent et volutpat ipsum, sit amet tristique
-        ex. Sed rhoncus orci turpis, vitae lobortis orci porttitor in. Nulla sollicitudin purus quis
-        enim scelerisque, in ullamcorper nibh dapibus. Integer vitae ultrices augue. Phasellus ac
-        sapien aliquet, finibus sapien quis, maximus sem.
-      </p>
-      <p style={{ marginBottom: '24px' }}>
-        Nulla at vehicula metus, ut malesuada lorem. Praesent et volutpat ipsum, sit amet tristique
-        ex. Sed rhoncus orci turpis, vitae lobortis orci porttitor in. Nulla sollicitudin purus quis
-        enim scelerisque, in ullamcorper nibh dapibus. Integer vitae ultrices augue. Phasellus ac
-        sapien aliquet, finibus sapien quis, maximus sem.
-      </p>
-      <p style={{ marginBottom: '24px' }}>
-        Nulla at vehicula metus, ut malesuada lorem. Praesent et volutpat ipsum, sit amet tristique
-        ex. Sed rhoncus orci turpis, vitae lobortis orci porttitor in. Nulla sollicitudin purus quis
-        enim scelerisque, in ullamcorper nibh dapibus. Integer vitae ultrices augue. Phasellus ac
-        sapien aliquet, finibus sapien quis, maximus sem.
-      </p>
-      <p style={{ marginBottom: '24px' }}>
-        Nulla at vehicula metus, ut malesuada lorem. Praesent et volutpat ipsum, sit amet tristique
-        ex. Sed rhoncus orci turpis, vitae lobortis orci porttitor in. Nulla sollicitudin purus quis
-        enim scelerisque, in ullamcorper nibh dapibus. Integer vitae ultrices augue. Phasellus ac
-        sapien aliquet, finibus sapien quis, maximus sem.
-      </p>
-      <p>
-        Cras sollicitudin placerat turpis eget egestas. Orci varius natoque penatibus et magnis dis
-        parturient montes, nascetur ridiculus mus. Nullam fringilla justo non ex tincidunt euismod.
-        Morbi condimentum tincidunt erat, non accumsan lorem. Etiam commodo ante vitae orci semper,
-        et placerat risus elementum.
-      </p>
-    </div>
+
+    <section class="section section--intro grid">
+      <div className="intro-content grid__start-2 grid__end-12 grid__start-3--sm grid__end-11--sm grid__start-3--md grid__end10--md grid__start-2--lg grid__end-8--lg grid__start-3--xl grid__end-8--xl">
+        <h1>Hello.</h1>
+        <p>
+          My name is Brandon Bews. I’m a designer and developer living in California. I’m currently
+          doing some stuff, and I like doing other kinds of stuff.
+        </p>
+        <p>
+          These things are important to me, and I strive to do them in all the ways I can imagine to
+          do them. Just a lot of really cool things, because I’m cool, and you want me to work for
+          you.
+        </p>
+        <div class="button">
+          <a href="#" className="button__content">
+            <span className="button__label">Get in Touch</span>
+          </a>
+        </div>
+        {/* <button class="button">
+          <div className="button__content">
+            <span className="button__label">Get in Touch</span>
+          </div>
+        </button> */}
+      </div>
+    </section>
+
+    <section class="section section--portfolio grid">
+      <div className="portfolio grid__start-1 grid__end-13">
+        <div className="section__headline">
+          <h1 className="section__headline-content">My Work</h1>
+        </div>
+        <ul className="portfolio__projects">
+          <li className="portfolio-project"></li>
+        </ul>
+      </div>
+    </section>
+    <section class="section section--contact"></section>
   </Layout>
 )
 

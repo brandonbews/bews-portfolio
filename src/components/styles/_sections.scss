@@ -1,0 +1,72 @@
+@mixin default-section-padding {
+  padding: var(--spacer8) var(--spacer4);
+  @include screen-sm {
+    padding: var(--spacer9) var(--spacer4);
+  }
+  @include screen-md {
+    padding: var(--spacer9) var(--spacer6);
+  }
+  @include screen-lg {
+    padding: var(--spacer10) var(--spacer8);
+  }
+  @include screen-xl {
+    padding: var(--spacer11) var(--spacer8);
+  }
+}
+
+.section {
+  position: relative;
+  @include default-section-padding;
+}
+.section__headline {
+  text-align: center;
+  font-size: 0;
+  position: relative;
+  z-index: 1;
+  &:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--colorTextMain);
+    top: 50%;
+    position: absolute;
+    z-index: -1;
+  }
+}
+.section__headline-content {
+  @include uiFont(4);
+  display: inline-block;
+  font-weight: var(--fontWeightBold);
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  background-color: var(--colorBackground);
+  margin: auto;
+  padding-left: var(--spacer4);
+  padding-right: var(--spacer4);
+}
+
+/*INTRO SECTION*/
+.section--intro {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  min-height: calc(100vh - var(--spacer9));
+  @include screen-md {
+    min-height: calc(100vh - var(--spacer11));
+  }
+  @include screen-lg {
+    min-height: calc(100vh - var(--spacer12));
+  }
+}
+.intro-content {
+  @include screen-lg {
+    max-width: $body-copy-max-width;
+  }
+  p:last-of-type {
+    margin-bottom: var(--spacer8);
+  }
+}
+
+/*PORTFOLIO SECTION*/
+.section--portfolio {
+}
