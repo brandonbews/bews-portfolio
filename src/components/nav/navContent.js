@@ -11,7 +11,6 @@ const NavContent = (props) => {
   let mainNavContent = useRef()
   let mainNavItem1 = useRef(null)
   let mainNavItem2 = useRef(null)
-  let mainNavItem3 = useRef(null)
   let mainNavTimelineOpen = useRef()
 
   //Nav animations
@@ -32,12 +31,12 @@ const NavContent = (props) => {
       '<'
     )
     mainNavTimelineOpen.current.from(
-      [mainNavItem1, mainNavItem2, mainNavItem3],
+      [mainNavItem1, mainNavItem2],
       { duration: 0.2, ease: 'power3.ease', y: '-50', stagger: 0.05 },
       '<'
     )
     mainNavTimelineOpen.current.from(
-      [mainNavItem1, mainNavItem2, mainNavItem3],
+      [mainNavItem1, mainNavItem2],
       { duration: 0.35, ease: 'power3.ease', opacity: 0, stagger: 0.1 },
       '<'
     )
@@ -72,9 +71,6 @@ const NavContent = (props) => {
               <a href="#">My Work</a>
             </li>
             <li className="main-nav__item" ref={(el) => (mainNavItem2 = el)}>
-              <a href="#">About Me</a>
-            </li>
-            <li className="main-nav__item" ref={(el) => (mainNavItem3 = el)}>
               <a href="#">Contact</a>
             </li>
           </ul>
