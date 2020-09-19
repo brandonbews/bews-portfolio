@@ -1,30 +1,30 @@
-@mixin screen-xsmall-landscape {
+@mixin screen-xs-landscape {
   @media (max-width: 340px), (max-height: 480px) {
     @content;
   }
 }
 
-@mixin screen-small {
+$breakpoints: sm, md, lg, xl;
+
+@mixin screen-sm {
   @media (min-width: 21.25rem) {
     @content;
   }
 }
 
-@mixin screen-medium {
+@mixin screen-md {
   @media (min-width: 48rem) {
-    //768
     @content;
   }
 }
 
-@mixin screen-large {
+@mixin screen-lg {
   @media (min-width: 64rem) {
-    //1024
     @content;
   }
 }
 
-@mixin screen-xlarge {
+@mixin screen-xl {
   @media (min-width: 90rem) {
     @content;
   }

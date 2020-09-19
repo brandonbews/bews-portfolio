@@ -23,11 +23,11 @@
   --globalMaxWidth: 1440px;
 
   //Media Queries
-  @include screen-medium {
+  @include screen-md {
     --paddingGlobalWrap: var(--spacer6);
     --paddingSectionWrap: var(--spacer7);
   }
-  @include screen-large {
+  @include screen-lg {
     --paddingSectionWrap: var(--spacer8);
   }
 }

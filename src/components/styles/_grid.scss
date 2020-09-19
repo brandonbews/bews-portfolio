@@ -1,0 +1,77 @@
+.grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--spacer2);
+}
+
+[class*='grid__'] {
+  height: 20px;
+  margin-bottom: 8px;
+  background-color: pink;
+}
+
+/* Create grid */
+@for $i from 1 through 12 {
+  .grid__span-#{$i} {
+    grid-column: span #{$i};
+  }
+  .grid__start-#{$i} {
+    grid-column-start: #{$i};
+  }
+  .grid__end-#{$i} {
+    grid-column-end: #{$i};
+  }
+}
+@include screen-sm {
+  @for $i from 1 through 12 {
+    .grid__span-#{$i}--sm {
+      grid-column: span #{$i};
+    }
+    .grid__start-#{$i}--sm {
+      grid-column-start: #{$i};
+    }
+    .grid__end-#{$i}--sm {
+      grid-column-end: #{$i};
+    }
+  }
+}
+@include screen-md {
+  @for $i from 1 through 12 {
+    .grid__span-#{$i}--md {
+      grid-column: span #{$i};
+    }
+    .grid__start-#{$i}--md {
+      grid-column-start: #{$i};
+    }
+    .grid__end-#{$i}--md {
+      grid-column-end: #{$i};
+    }
+  }
+}
+@include screen-lg {
+  @for $i from 1 through 12 {
+    .grid__span-#{$i}--lg {
+      grid-column: span #{$i};
+    }
+    .grid__start-#{$i}--lg {
+      grid-column-start: #{$i};
+    }
+    .grid__end-#{$i}--lg {
+      grid-column-end: #{$i};
+    }
+  }
+}
+@include screen-xl {
+  @for $i from 1 through 12 {
+    .grid__span-#{$i}--xl {
+      grid-column: span #{$i};
+    }
+    .grid__start-#{$i}--xl {
+      grid-column-start: #{$i};
+    }
+    .grid__end-#{$i}--xl {
+      grid-column-end: #{$i};
+    }
+  }
+}

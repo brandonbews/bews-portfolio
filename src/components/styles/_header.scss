@@ -15,21 +15,21 @@
   top: 0;
   width: 100%;
   z-index: 1;
-  @include screen-medium {
+  @include screen-md {
     margin-bottom: calc(-1 * var(--spacer10));
     padding: calc(var(--paddingSectionWrap) - var(--spacer4));
     padding-bottom: 0;
     padding-left: calc(var(--paddingSectionWrap) - var(--spacer5));
     padding-right: calc(var(--paddingSectionWrap) - var(--spacer5));
   }
-  @include screen-large {
+  @include screen-lg {
     margin-bottom: calc(-1 * var(--spacer11));
     padding: calc(var(--paddingSectionWrap) - var(--spacer5));
     padding-bottom: 0;
     padding-left: calc(var(--paddingSectionWrap) - var(--spacer5));
     padding-right: calc(var(--paddingSectionWrap) - var(--spacer5));
   }
-  @include screen-xlarge {
+  @include screen-xl {
     max-width: calc(var(--globalMaxWidth) + calc(var(--paddingGlobalWrap) * 2));
   }
 }
@@ -42,10 +42,10 @@
   display: flex;
   // transition: 0.25s box-shadow ease;
   padding: var(--spacer3) var(--spacer4);
-  @include screen-medium {
+  @include screen-md {
     padding: var(--spacer4) var(--spacer5);
   }
-  @include screen-large {
+  @include screen-lg {
     padding: var(--spacer5);
   }
 }
@@ -56,7 +56,7 @@
   padding-left: calc(var(--paddingTotalWrap) - var(--spacer4));
   padding-right: calc(var(--paddingTotalWrap) - var(--spacer4));
   position: fixed;
-  @include screen-medium {
+  @include screen-md {
     padding-top: var(--spacer2);
     padding-bottom: 0;
     padding-left: calc(var(--paddingTotalWrap) - var(--spacer5));
@@ -79,14 +79,14 @@
 .site-header__logo {
   font-size: 0;
   margin-right: var(--spacer2);
-  @include screen-large {
+  @include screen-lg {
     margin-right: var(--spacer3);
   }
   svg {
     height: var(--spacer6);
     width: auto;
     overflow: visible;
-    @include screen-large {
+    @include screen-lg {
       height: var(--spacer7);
     }
     #logo-gradient {
@@ -101,7 +101,8 @@
 .site-header__brandon-bews {
   @include uiFont(2);
   font-weight: var(--fontWeightBold);
-  @include screen-large {
+  margin: 0;
+  @include screen-lg {
     @include uiFont(3);
     font-weight: var(--fontWeightBold);
   }
@@ -127,7 +128,7 @@
   .mobile-nav-toggle__svg {
     width: var(--spacer6);
     height: auto;
-    @include screen-large {
+    @include screen-lg {
       width: var(--spacer7);
     }
     line {
@@ -155,7 +156,7 @@
   height: 100vh;
   width: 100%;
   &__content-wrap {
-    @include screen-large {
+    @include screen-lg {
       width: 50vh;
       margin: auto;
     }
@@ -167,23 +168,20 @@
     box-shadow: var(--shadowBoxNav);
     padding: var(--paddingMainNav);
     width: 100%;
-    @include screen-xsmall-landscape {
+    @include screen-xs-landscape {
       padding: var(--spacer5);
       margin-top: var(--spacer10);
     }
-    @include screen-small {
+    @include screen-sm {
       margin-top: var(--spacer10);
     }
-    @include screen-medium {
+    @include screen-md {
       margin-top: var(--spacer11);
     }
-    @include screen-large {
+    @include screen-lg {
       margin-top: var(--spacer12);
-      // margin-right: auto;
-      // margin-left: auto;
-      // width: 100%;
     }
-    @include screen-xlarge {
+    @include screen-xl {
       max-width: calc(var(--globalMaxWidth) - calc(var(--paddingTotalWrap) * 2));
       margin-left: auto;
       margin-right: auto;
@@ -212,7 +210,7 @@
       text-decoration: none;
       color: var(--colorWhite);
     }
-    @include screen-xsmall-landscape {
+    @include screen-xs-landscape {
       @include uiFont(3);
       font-weight: var(--fontWeightBold);
       margin-bottom: var(--spacer6);
