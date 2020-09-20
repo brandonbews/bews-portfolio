@@ -11,6 +11,7 @@ html {
     transition: font-size $baseline-transition, height $baseline-transition,
       color $baseline-transition, background-color $baseline-transition,
       border-color $baseline-transition, box-shadow $baseline-transition;
+    -moz-osx-font-smoothing: none;
   }
 }
 
@@ -26,6 +27,12 @@ html {
   color: var(--colorTextMain);
   margin: auto;
   max-width: var(--globalMaxWidth);
+}
+
+a,
+a:focus,
+a:visited {
+  color: inherit;
 }
 
 //Fix iOS Safari Button Flash

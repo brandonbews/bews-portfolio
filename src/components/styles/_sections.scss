@@ -1,10 +1,10 @@
 @mixin default-section-padding {
-  padding: var(--spacer8) var(--spacer4);
+  padding: var(--spacer7) var(--spacer4);
   @include screen-sm {
     padding: var(--spacer9) var(--spacer4);
   }
   @include screen-md {
-    padding: var(--spacer9) var(--spacer6);
+    padding: var(--spacer9) var(--spacer7);
   }
   @include screen-lg {
     padding: var(--spacer10) var(--spacer8);
@@ -22,7 +22,11 @@
   text-align: center;
   font-size: 0;
   position: relative;
-  z-index: 1;
+  z-index: 0;
+  margin-bottom: var(--spacer4);
+  @include screen-sm {
+    margin-bottom: var(--spacer5);
+  }
   &:after {
     content: '';
     display: block;
@@ -36,8 +40,16 @@
 }
 .section__headline-content {
   @include uiFont(4);
-  display: inline-block;
   font-weight: var(--fontWeightBold);
+  @include screen-lg {
+    @include uiFont(5);
+    font-weight: var(--fontWeightBold);
+  }
+  @include screen-xl {
+    @include uiFont(6);
+    font-weight: var(--fontWeightBold);
+  }
+  display: inline-block;
   letter-spacing: 0.15rem;
   text-transform: uppercase;
   background-color: var(--colorBackground);
@@ -63,7 +75,10 @@
     max-width: $body-copy-max-width;
   }
   p:last-of-type {
-    margin-bottom: var(--spacer8);
+    margin-bottom: var(--spacer7);
+    @include screen-sm {
+      margin-bottom: var(--spacer8);
+    }
   }
 }
 

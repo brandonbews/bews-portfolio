@@ -2,6 +2,12 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: var(--spacer2);
+  @include screen-md {
+    column-gap: var(--spacer5);
+  }
+  @include screen-lg {
+    column-gap: var(--spacer6);
+  }
 }
 
 /* Create grid */

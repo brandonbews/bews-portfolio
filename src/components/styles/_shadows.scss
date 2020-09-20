@@ -15,4 +15,9 @@
 
   --shadowInset: inset 0 0 4px 0 rgba(0, 0, 0, 0.65);
   --shadowInsetLighten: inset 0 0 6px 0 rgba(0, 0, 0, 0.55);
+
+  --shadowBoxCard: rgba(0, 0, 0, 0.12) 0px 2px 2px 0, rgba(0, 0, 0, 0.12) 0px 4px 4px 0,
+    rgba(0, 0, 0, 0.12) 0px 8px 8px 0, rgba(0, 0, 0, 0.12) 0px 16px 16px 0;
+  --shadowBoxCard--night: rgba(0, 0, 0, 0.22) 0px 2px 2px 0, rgba(0, 0, 0, 0.22) 0px 4px 4px 0,
+    rgba(0, 0, 0, 0.22) 0px 8px 8px 0, rgba(0, 0, 0, 0.22) 0px 16px 16px 0;
 }

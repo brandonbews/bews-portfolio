@@ -64,7 +64,7 @@ const NavContent = (props) => {
 
   return (
     <nav className="main-nav" ref={(el) => (mainNav = el)}>
-      <div ref={navWrap} class="main-nav__content-wrap">
+      <div ref={navWrap} className="main-nav__content-wrap">
         <div className="main-nav__content" ref={(el) => (mainNavContent = el)}>
           <ul className="main-nav__list">
             <li className="main-nav__item" ref={(el) => (mainNavItem1 = el)}>

@@ -1,0 +1,56 @@
+.portfolio__projects {
+}
+.portfolio-project {
+  position: relative;
+  margin-bottom: var(--spacer5);
+  @include screen-lg {
+    margin-bottom: var(--spacer6);
+  }
+}
+.portfolio-project__image {
+  border-radius: var(--radiusBase);
+}
+.portfolio-project__meta {
+  position: absolute;
+  background-color: var(--colorCardBg);
+  border-radius: var(--radiusBase);
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: var(--shadowBoxCard);
+  padding: var(--spacer4);
+  width: calc(100% - var(--spacer4));
+  bottom: calc(var(--spacer4) / 2);
+  @include screen-sm {
+    width: calc(100% - var(--spacer5));
+    bottom: calc(var(--spacer5) / 2);
+  }
+  @include screen-lg {
+    padding: var(--spacer5);
+  }
+}
+.portfolio-project__name {
+  margin: 0;
+  @include titleFont(4);
+  font-weight: var(--fontWeightBold);
+  margin-bottom: var(--spacer2);
+  margin-top: calc(var(--spacer1) * -1);
+}
+.portfolio-project__entity {
+  margin: 0;
+  color: var(--colorCardClient);
+  @include uiFont(2);
+  margin-bottom: var(--spacer4);
+}
+
+.portfolio-project__skills {
+  display: flex;
+}
+.portfolio-project__skill {
+  @include uiFont(1);
+  text-transform: uppercase;
+  background-color: var(--colorTagPillsBg);
+  color: var(--colorTagPillsText);
+  border-radius: 100rem;
+  padding: var(--spacer1) var(--spacer2);
+  margin-right: var(--spacer2);
+}
