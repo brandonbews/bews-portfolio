@@ -11,15 +11,17 @@ const Header = ({ siteTitle }) => {
   const siteHeader = useRef()
 
   const checkHeaderScroll = (startDistance) => {
-    const distanceFromTop = siteHeader.current.getBoundingClientRect().top
-    if (window.scrollY === 0) {
-      siteHeaderWrap.current.classList.remove('site-header__wrap--detached')
-    } else {
-      if (distanceFromTop <= 8) {
-        siteHeaderWrap.current.classList.add('site-header__wrap--detached')
-      }
-      if (window.scrollY <= startDistance - 8) {
+    if (siteHeader.current) {
+      const distanceFromTop = siteHeader.current.getBoundingClientRect().top
+      if (window.scrollY === 0) {
         siteHeaderWrap.current.classList.remove('site-header__wrap--detached')
+      } else {
+        if (distanceFromTop <= 8) {
+          siteHeaderWrap.current.classList.add('site-header__wrap--detached')
+        }
+        if (window.scrollY <= startDistance - 8) {
+          siteHeaderWrap.current.classList.remove('site-header__wrap--detached')
+        }
       }
     }
   }
