@@ -110,7 +110,14 @@ $body-copy-max-width: 32rem;
 
 h1,
 .h1 {
-  @include titleFont(7);
+  @include titleFont(6);
+  font-weight: var(--fontWeightBold);
+  margin-bottom: var(--spacer5);
+  @include screen-sm {
+    @include titleFont(7);
+    font-weight: var(--fontWeightBold);
+    margin-bottom: var(--spacer6);
+  }
   font-weight: var(--fontWeightBold);
   margin-bottom: var(--spacer6);
   margin-top: 0;
