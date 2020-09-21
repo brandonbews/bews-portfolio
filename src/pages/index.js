@@ -22,7 +22,7 @@ const IndexPage = () => (
           you.
         </p>
         <div className="button">
-          <a href="#" className="button__content">
+          <a href="#get-in-touch" className="button__content">
             <span className="button__label">Get in Touch</span>
           </a>
         </div>
@@ -34,7 +34,7 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <section className="section section--portfolio grid">
+    <section id="portfolio" className="section section--portfolio grid">
       <div className="portfolio grid__start-1 grid__end-13 grid__start-2--sm grid__end-12--sm grid__start-1--md grid__end-13--md grid__start-2--lg grid__end-12--lg">
         <div className="section__headline">
           <h1 className="section__headline-content">My Work</h1>
@@ -43,7 +43,7 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <section className="section section--contact"></section>
+    <section id="get-in-touch" className="section section--contact"></section>
   </Layout>
 )
 

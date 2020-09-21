@@ -1,7 +1,7 @@
 @mixin night-mode {
-  // @media (prefers-color-scheme: dark) {
-  //   @content;
-  // }
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
   &--night {
     @content;
   }
@@ -13,6 +13,9 @@
 
     /* Text */
     --colorTextMain: var(--colorTextMain--night);
+
+    /* Links */
+    --colorLinkDefault: var(----colorLinkDefault--night);
 
     /* Headline Accent */
     --colorHeadlineAccent: var(--colorHeadlineAccent--night);

@@ -32,6 +32,10 @@
   --colorTextMain: var(--colorBlack);
   --colorTextMain--night: var(--colorWhite);
 
+  /* Links */
+  --colorLinkDefault: var(--colorBlueDark);
+  --colorLinkDefault--night: var(--colorBlueLight);
+
   /* Headline Accent */
   --colorHeadlineAccent: var(----colorGray);
   --colorHeadlineAccent--night: var(----colorGray);

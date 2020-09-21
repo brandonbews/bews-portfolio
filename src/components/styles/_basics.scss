@@ -5,6 +5,7 @@ $snappy-transition: 0.05s ease-in-out;
 html {
   font-size: 16px;
   background-color: var(--colorFarBackground);
+  scroll-behavior: smooth;
 
   /* Add baseline transition */
   * {
@@ -32,7 +33,7 @@ html {
 a,
 a:focus,
 a:visited {
-  color: inherit;
+  color: var(--colorLinkDefault);
 }
 
 //Fix iOS Safari Button Flash

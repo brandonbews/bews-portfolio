@@ -1,10 +1,19 @@
+/////////////////////////////////
+// Portfolio List Item
+/////////////////////////////////
 .portfolio__projects {
+  position: relative;
 }
 .portfolio-project {
   position: relative;
   margin-bottom: var(--spacer5);
+  transition: transform $baseline-transition;
   @include screen-sm {
     margin-bottom: var(--spacer6);
+  }
+  &:hover,
+  &:focus {
+    transform: scale(101.5%);
   }
 }
 .portfolio-project__image {
@@ -30,6 +39,7 @@
 }
 .portfolio-project__name {
   margin: 0;
+  color: var(--colorTextMain);
   @include titleFont(4);
   font-weight: var(--fontWeightBold);
   margin-bottom: var(--spacer2);
@@ -54,3 +64,7 @@
   padding: var(--spacer1) var(--spacer2);
   margin-right: var(--spacer2);
 }
+
+/////////////////////////////////
+// Portfolio Piece Landing Page
+/////////////////////////////////
