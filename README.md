@@ -1,5 +1,9 @@
 # Brandon Bews Personal Portfolio
 
+Hello. I'm building a new personal site. It's not quite ready yet, but I'm building in the open in this repo.
+
+I can't wait to share!
+
 ## Typography
 
 Adjust type system settings in \_typograhpy.scss
