@@ -1,7 +1,7 @@
 @mixin night-mode {
-  @media (prefers-color-scheme: dark) {
-    @content;
-  }
+  // @media (prefers-color-scheme: dark) {
+  //   @content;
+  // }
   &--night {
     @content;
   }
@@ -13,6 +13,9 @@
 
     /* Text */
     --colorTextMain: var(--colorTextMain--night);
+
+    /* Headline Accent */
+    --colorHeadlineAccent: var(--colorHeadlineAccent--night);
 
     /* Main nav button */
     --colorNavToggleInactive: var(--colorNavToggleInactive--night);
@@ -26,5 +29,21 @@
     --colorCardBg: var(--colorCardBg--night);
     --colorCardClient: var(--colorCardClient--night);
     --colorTagPillsBg: var(--colorTagPillsBg--night);
+
+    // Add a text shadow to large breakpoint in intro header
+    // The colors here are manual to manage the alpha channel
+    .intro-content {
+      h1,
+      h2,
+      h3,
+      p {
+        @include screen-lg {
+          text-shadow: 1px 0px 2px hsla(223, 10%, 13%, 1%);
+        }
+        @include screen-xl {
+          text-shadow: none;
+        }
+      }
+    }
   }
 }

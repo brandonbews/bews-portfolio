@@ -37,25 +37,40 @@
     position: absolute;
     z-index: -1;
   }
+  @include screen-lg {
+    display: inline-block;
+    padding-bottom: var(--spacer3);
+    &:after {
+      position: relative;
+      height: 3px;
+      border-radius: 2px;
+      background-color: var(--colorGray);
+    }
+    text-align: left;
+  }
 }
 .section__headline-content {
-  @include uiFont(4);
-  font-weight: var(--fontWeightBold);
-  @include screen-lg {
-    @include uiFont(5);
-    font-weight: var(--fontWeightBold);
-  }
-  @include screen-xl {
-    @include uiFont(6);
-    font-weight: var(--fontWeightBold);
-  }
   display: inline-block;
-  letter-spacing: 0.15rem;
   text-transform: uppercase;
   background-color: var(--colorBackground);
   margin: auto;
   padding-left: var(--spacer4);
   padding-right: var(--spacer4);
+  @include uiFont(4);
+  font-weight: var(--fontWeightBold);
+  @include screen-lg {
+    @include titleFont(6);
+    font-weight: var(--fontWeightBold);
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: var(--spacer5);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  @include screen-xl {
+    // @include uiFont(6);
+    font-weight: var(--fontWeightBold);
+  }
 }
 
 /*INTRO SECTION*/
@@ -63,11 +78,42 @@
   margin-bottom: 0;
   padding-bottom: 0;
   min-height: calc(100vh - var(--spacer9));
+  position: relative;
+  z-index: 0;
+  &:after {
+    content: '';
+    position: absolute;
+    // height: 170%;
+    height: 0;
+    padding-top: 100%;
+    top: calc(var(--spacer11) * -1);
+    border-radius: var(--radiusBase);
+    width: 100%;
+    z-index: -1;
+    @include screen-lg {
+      background-image: url(../../images/hero-bg.svg), url(../../images/hero-bg-2.svg);
+      background-repeat: no-repeat;
+      background-position: right 8% top 100%, right -7% top -10%;
+      background-size: 65% 65%, 65% 65%;
+      background-blend-mode: multiply;
+    }
+    @include screen-xl {
+      height: 160%;
+      background-position: right 5% top 70%, right -15% top -10%;
+      background-size: 61% 61%, 61% 61%;
+    }
+  }
+  @include screen-sm {
+    padding-top: var(--spacer10);
+  }
   @include screen-md {
+    padding-top: var(--spacer12);
     min-height: calc(100vh - var(--spacer11));
   }
   @include screen-lg {
-    min-height: calc(100vh - var(--spacer12));
+    padding-top: var(--spacer11);
+    min-height: auto;
+    margin-bottom: var(--spacer13);
   }
 }
 .intro-content {
@@ -84,4 +130,7 @@
 
 /*PORTFOLIO SECTION*/
 .section--portfolio {
+  @include screen-lg {
+    margin-top: var(--spacer8);
+  }
 }

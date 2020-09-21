@@ -3,7 +3,7 @@
 .portfolio-project {
   position: relative;
   margin-bottom: var(--spacer5);
-  @include screen-lg {
+  @include screen-sm {
     margin-bottom: var(--spacer6);
   }
 }

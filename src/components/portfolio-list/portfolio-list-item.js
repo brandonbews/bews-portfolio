@@ -8,7 +8,7 @@ const PortfolioListItem = ({ post }) => {
     <li className="portfolio-project__skill">{skill}</li>
   ))
   return (
-    <li className="portfolio-project grid__span-12 grid__span-6--md grid__span-4--xl">
+    <li className="portfolio-project grid__span-12 grid__span-6--md">
       <Link to={post.frontmatter.slug}>
         <Img
           className="portfolio-project__image"
