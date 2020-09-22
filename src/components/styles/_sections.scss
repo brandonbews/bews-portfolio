@@ -150,7 +150,7 @@
     position: absolute;
     height: 0;
     padding-top: 100%;
-    top: calc(var(--spacer10) * -1);
+    bottom: calc(var(--spacer9) * -1);
     border-radius: var(--radiusBase);
     width: 100%;
     z-index: -1;
@@ -158,13 +158,13 @@
       background-image: url(../../images/footer-bg.svg), url(../../images/footer-bg-2.svg);
       background-repeat: no-repeat;
       // background-position: right -35% bottom 80%, right 10% bottom -70%;
-      background-position: right 25% top 155%, right -35% top 10%;
+      background-position: right 25% top 160%, right -35% top 15%;
       background-size: 65% 65%, 70% 70%;
       background-blend-mode: multiply;
     }
     @include screen-xl {
       padding-top: 100%;
-      background-position: right 25% top 105%, right -8% top 0%;
+      background-position: right 25% top 175%, right -8% top 70%;
       background-size: 60% 60%, 60% 60%;
     }
   }
