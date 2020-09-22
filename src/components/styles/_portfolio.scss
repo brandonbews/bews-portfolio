@@ -48,6 +48,7 @@
 .portfolio-project__entity {
   margin: 0;
   color: var(--colorCardClient);
+  display: block;
   @include uiFont(2);
   margin-bottom: var(--spacer4);
 }

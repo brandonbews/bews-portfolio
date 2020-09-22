@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 import PortfolioList from '../components/portfolio-list/portfolio-list.js'
+import ContactForm from '../components/contact-form.js'
 
 const IndexPage = () => (
   <Layout>
@@ -21,7 +22,7 @@ const IndexPage = () => (
           do them. Just a lot of really cool things, because I’m cool, and you want me to work for
           you.
         </p>
-        <div className="button">
+        <div className="button button--below">
           <a href="#get-in-touch" className="button__content">
             <span className="button__label">Get in Touch</span>
           </a>
@@ -43,7 +44,14 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <section id="get-in-touch" className="section section--contact"></section>
+    <section id="get-in-touch" className="section section--contact grid">
+      <div className="grid__start-1 grid__end-13 grid__start-2--sm grid__end-12--sm grid__start-1--md grid__end-13--md grid__start-2--lg grid__end-12--lg">
+        <div className="section__headline">
+          <h1 className="section__headline-content">Get in Touch</h1>
+        </div>
+        <ContactForm></ContactForm>
+      </div>
+    </section>
   </Layout>
 )
 

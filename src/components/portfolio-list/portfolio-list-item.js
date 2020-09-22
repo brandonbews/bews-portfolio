@@ -19,7 +19,7 @@ const PortfolioListItem = ({ post }) => {
         />
         <div className="portfolio-project__meta">
           <h2 className="portfolio-project__name">{post.frontmatter.title}</h2>
-          <p className="portfolio-project__entity">{post.frontmatter.entity}</p>
+          <span className="portfolio-project__entity">{post.frontmatter.entity}</span>
           <ul className="portfolio-project__skills">{skills}</ul>
         </div>
       </Link>

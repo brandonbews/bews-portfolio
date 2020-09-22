@@ -120,12 +120,6 @@
   @include screen-lg {
     max-width: $body-copy-max-width;
   }
-  p:last-of-type {
-    margin-bottom: var(--spacer7);
-    @include screen-sm {
-      margin-bottom: var(--spacer8);
-    }
-  }
 }
 
 /*PORTFOLIO SECTION*/

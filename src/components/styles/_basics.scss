@@ -36,6 +36,11 @@ a:visited {
   color: var(--colorLinkDefault);
 }
 
+// //Remove bottom margin on all final paragraphs
+p:last-of-type {
+  margin-bottom: 0;
+}
+
 //Fix iOS Safari Button Flash
 button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
