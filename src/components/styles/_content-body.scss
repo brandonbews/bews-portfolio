@@ -1,6 +1,7 @@
 .content-body {
   padding-top: var(--spacer9);
   padding-bottom: var(--spacer7);
+  overflow: hidden;
   @include screen-sm {
     padding-bottom: 0;
   }
