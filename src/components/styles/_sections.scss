@@ -154,7 +154,9 @@
     border-radius: var(--radiusBase);
     width: 100%;
     z-index: -1;
+    display: none;
     @include screen-lg {
+      display: block;
       background-image: url(../../images/footer-bg.svg), url(../../images/footer-bg-2.svg);
       background-repeat: no-repeat;
       // background-position: right -35% bottom 80%, right 10% bottom -70%;

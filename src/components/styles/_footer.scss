@@ -12,9 +12,10 @@
   }
   font-size: 0;
   .svg-inline--fa {
-    width: var(--spacer5);
+    //Override inline styles that Fontawesome adds.
+    width: var(--spacer5) !important;
     @include screen-xl {
-      width: var(--spacer6);
+      width: var(--spacer6) !important;
     }
     height: auto;
     path {
