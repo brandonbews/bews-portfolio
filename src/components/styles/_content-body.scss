@@ -1,9 +1,12 @@
 .content-body {
   padding-top: var(--spacer9);
-  padding-bottom: var(--spacer9);
+  padding-bottom: var(--spacer7);
+  @include screen-sm {
+    padding-bottom: 0;
+  }
   @include screen-md {
     padding-top: var(--spacer10);
-    padding-bottom: var(--spacer9);
+    padding-bottom: var(--spacer4);
   }
   @include screen-lg {
     padding-top: var(--spacer11);

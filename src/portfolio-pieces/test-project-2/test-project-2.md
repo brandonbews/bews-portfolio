@@ -3,7 +3,6 @@ slug: '/portfolio/test-project-2'
 date: '2020-09-02'
 title: 'Project 2'
 entity: 'Myself'
-banner: 'test-image-2.png'
 skills: ['UX', 'Development']
 tools: ['Figma', 'JS']
 priority: 2

@@ -5,7 +5,9 @@ import Img from 'gatsby-image'
 
 const PortfolioListItem = ({ post }) => {
   const skills = post.frontmatter.skills.map((skill) => (
-    <li className="portfolio-project__skill">{skill}</li>
+    <li className="portfolio-project__skill">
+      <span className="portfolio-project__skill-content">{skill}</span>
+    </li>
   ))
   return (
     <li className="portfolio-project grid__span-12 grid__span-6--md">

@@ -7,13 +7,15 @@
 .portfolio-project {
   position: relative;
   margin-bottom: var(--spacer5);
-  transition: transform $baseline-transition;
+  transition: transform $baseline-transition, box-shadow $baseline-transition;
+  border-radius: var(--radiusBase);
   @include screen-sm {
     margin-bottom: var(--spacer6);
   }
   &:hover,
   &:focus {
     transform: scale(101.5%);
+    box-shadow: var(--shadowBoxCard);
   }
 }
 .portfolio-project__image {
@@ -57,7 +59,7 @@
   display: flex;
 }
 .portfolio-project__skill {
-  @include uiFont(1);
+  font-size: 0;
   text-transform: uppercase;
   background-color: var(--colorTagPillsBg);
   color: var(--colorTagPillsText);
@@ -65,7 +67,110 @@
   padding: var(--spacer1) var(--spacer2);
   margin-right: var(--spacer2);
 }
+.portfolio-project__skill-content {
+  @include uiFont(1);
+  display: inline-block;
+}
 
 /////////////////////////////////
 // Portfolio Piece Landing Page
 /////////////////////////////////
+@mixin portfolio-piece-padding {
+  padding: var(--spacer7) var(--spacer5);
+  @include screen-sm {
+    padding: var(--spacer9) var(--spacer5);
+  }
+  @include screen-md {
+    padding: var(--spacer9) var(--spacer7);
+  }
+  @include screen-lg {
+    padding: var(--spacer10) var(--spacer8);
+  }
+  @include screen-xl {
+    padding: var(--spacer11) var(--spacer8);
+  }
+}
+
+.portfolio-article {
+  @include portfolio-piece-padding;
+}
+
+.portfolio-article__content {
+  .gatsby-resp-image-figure {
+    margin: var(--spacer7) 0 var(--spacer6) 0;
+    @include screen-md {
+      margin: var(--spacer8) 0 var(--spacer7) 0;
+    }
+  }
+  .gatsby-resp-image-wrapper {
+    margin-bottom: var(--spacer3);
+  }
+  .gatsby-resp-image-figcaption {
+    @include uiFont(2);
+    font-style: italic;
+    color: var(--colorCardClient);
+    text-align: center;
+  }
+  .gatsby-resp-image-background-image {
+    border-radius: var(--radiusBase);
+  }
+  img {
+    width: 100%;
+    border-radius: var(--radiusBase);
+  }
+  padding: 0;
+  @include screen-sm {
+    padding: 8%;
+  }
+  @include screen-md {
+    padding: 0 12.5%;
+  }
+  @include screen-lg {
+    padding: 0 18%;
+  }
+  @media (min-width: 1200px) and (max-width: 1375px) {
+    padding: 0 20%;
+  }
+  @include screen-xl {
+    padding: 0 23%;
+  }
+  @media (min-width: 1400px) {
+    padding: 0 25%;
+  }
+}
+
+.portfolio-article__entity {
+  margin: 0;
+  color: var(--colorCardClient);
+  display: block;
+  @include uiFont(2);
+  margin-bottom: var(--spacer4);
+  margin-top: calc(var(--spacer4) * -1);
+  @include screen-sm {
+    margin-bottom: var(--spacer5);
+  }
+}
+.portfolio-article__pills {
+  display: flex;
+  margin-bottom: var(--spacer6);
+}
+.portfolio-article__pill {
+  text-transform: uppercase;
+  font-size: 0;
+  background-color: var(--colorTagPillsBg);
+  color: var(--colorTagPillsText);
+  border-radius: 100rem;
+  padding: var(--spacer1) var(--spacer2);
+  margin-right: var(--spacer2);
+  @include screen-sm {
+    padding: var(--spacer2) var(--spacer4);
+    margin-right: var(--spacer4);
+  }
+}
+.portfolio-article__pill-content {
+  @include uiFont(1);
+  display: inline-block;
+}
+.portfolio-article__pill--skill {
+  background-color: var(--colorTagPillsBgArticle);
+}

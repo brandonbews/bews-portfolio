@@ -36,3 +36,10 @@ $breakpoints: sm, md, lg, xl;
     @content;
   }
 }
+
+/* Shim Media Queries */
+@mixin screen-lg-line-length-shim {
+  @media (min-width: 75rem) and (max-width: 1375px) {
+    @content;
+  }
+}

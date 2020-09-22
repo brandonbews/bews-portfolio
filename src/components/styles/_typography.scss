@@ -98,7 +98,7 @@ $base-font-position: 3; //Position that should be the base font size. This is us
 }
 
 // Set global body font
-.site-wrapper__content {
+.site-wrapper {
   @include bodyFont($base-font-position);
   font-family: var(--fontFamilyMain);
 }
@@ -106,8 +106,6 @@ $base-font-position: 3; //Position that should be the base font size. This is us
 ////////////////////////
 // Typography Basics
 ////////////////////////
-$body-copy-max-width: 32rem;
-
 h1,
 .h1 {
   @include titleFont(6);
@@ -136,6 +134,8 @@ h3,
   margin-bottom: var(--spacer4);
   margin-top: var(--spacer8);
 }
-p {
+p,
+ul,
+ol {
   margin-bottom: var(--spacer5);
 }
