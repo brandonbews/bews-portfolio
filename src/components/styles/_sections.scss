@@ -23,8 +23,11 @@
   font-size: 0;
   position: relative;
   z-index: 0;
-  margin-bottom: var(--spacer4);
+  margin-bottom: var(--spacer6);
   @include screen-sm {
+    margin-bottom: var(--spacer7);
+  }
+  @include screen-lg {
     margin-bottom: var(--spacer5);
   }
   &:after {
@@ -80,6 +83,11 @@
   min-height: calc(100vh - var(--spacer9));
   position: relative;
   z-index: 0;
+  //Override to help readability on small devices
+  @media (max-width: 592px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
   &:after {
     content: '';
     position: absolute;
@@ -115,16 +123,49 @@
     min-height: auto;
     margin-bottom: var(--spacer13);
   }
+  @include screen-xl {
+    padding-top: var(--spacer12);
+  }
 }
 .intro-content {
   @include screen-lg {
-    max-width: $body-copy-max-width;
+    max-width: 32rem;
   }
 }
 
 /*PORTFOLIO SECTION*/
 .section--portfolio {
+  z-index: 1;
   @include screen-lg {
     margin-top: var(--spacer8);
+  }
+}
+
+/* CONTACT */
+.section--contact {
+  position: relative;
+  z-index: 0;
+  &:after {
+    content: '';
+    position: absolute;
+    height: 0;
+    padding-top: 100%;
+    top: calc(var(--spacer10) * -1);
+    border-radius: var(--radiusBase);
+    width: 100%;
+    z-index: -1;
+    @include screen-lg {
+      background-image: url(../../images/footer-bg.svg), url(../../images/footer-bg-2.svg);
+      background-repeat: no-repeat;
+      // background-position: right -35% bottom 80%, right 10% bottom -70%;
+      background-position: right 25% top 155%, right -35% top 10%;
+      background-size: 65% 65%, 70% 70%;
+      background-blend-mode: multiply;
+    }
+    @include screen-xl {
+      padding-top: 100%;
+      background-position: right 25% top 105%, right -8% top 0%;
+      background-size: 60% 60%, 60% 60%;
+    }
   }
 }

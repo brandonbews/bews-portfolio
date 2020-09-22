@@ -1,0 +1,50 @@
+.contact-form__field {
+  position: relative;
+  z-index: 0;
+  background-color: var(--colorBackground);
+  border: 2px solid var(--colorFormFieldStroke);
+  border-radius: var(--radiusBase);
+  padding: var(--spacer4) var(--spacer5);
+  margin-bottom: var(--spacer5);
+  input,
+  textarea {
+    @include uiFont(3);
+    background-color: var(--colorBackground);
+    outline: 0;
+    border: 0;
+    color: var(--colorFormValues);
+    border-radius: var(--radiusBase);
+    width: 100%;
+  }
+  label {
+    position: absolute;
+    top: -1.1rem;
+    left: 0;
+    background-color: var(--colorBackground);
+    margin-left: var(--spacer4);
+    font-size: 0;
+    color: var(--colorFormLabels);
+    padding: var(--spacer2);
+  }
+}
+.contract-form__field-label {
+  @include uiFont(2);
+  font-weight: var(--fontWeightBlack);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  z-index: 1;
+}
+.contact-form__field--message {
+  textarea {
+    resize: none;
+    line-height: var(--bodyLineHeight);
+  }
+  margin-bottom: var(--spacer7);
+}
+.contact-form__submit {
+  text-align: center;
+  @include screen-lg {
+    text-align: left;
+  }
+}

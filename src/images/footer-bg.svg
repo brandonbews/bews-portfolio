@@ -1,0 +1,7 @@
+<svg width="104" height="128" viewBox="0 0 104 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <linearGradient id="header-accent-gradient" gradient-transform="rotate(-75)">
+    <stop offset="0%" stop-color="#65F1FA" />
+    <stop offset="100%" stop-color="#97F9FF" />
+  </linearGradient>
+<path d="M93.4 45.7002C97 62.2002 93.3001 73.1002 95.7001 86.4002C98.1001 99.7002 106.5 115.3 102.9 122.4C99.3 129.5 83.7 128 70.1 126C56.5 123.9 44.9 121.2 32.7 114.1C20.4 107.1 7.50005 95.5002 2.50005 79.1002C-2.39995 62.6002 0.600047 41.1002 12.9 24.6002C25.1 8.10016 46.6 -3.49984 62.7 1.70016C78.9 7.00016 89.8 29.1002 93.4 45.7002Z" fill="url('#header-accent-gradient')" fill-opacity="0.95"/>
+</svg>

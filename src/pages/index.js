@@ -14,24 +14,20 @@ const IndexPage = () => (
       <div className="intro-content grid__start-2 grid__end-12 grid__start-3--sm grid__end-11--sm grid__start-3--md grid__end10--md grid__start-2--lg grid__end-8--lg grid__start-2--xl grid__end-7--xl">
         <h1>Hello.</h1>
         <p>
-          My name is Brandon Bews. I’m a designer and developer living in California. I’m currently
-          doing some stuff, and I like doing other kinds of stuff.
+          My name is Brandon Bews. I'm a designer and front end developer, passionate about working
+          and learning at the intersection between design and code. Welcome to my handbuilt home on
+          the web.
         </p>
         <p>
-          These things are important to me, and I strive to do them in all the ways I can imagine to
-          do them. Just a lot of really cool things, because I’m cool, and you want me to work for
-          you.
+          I currently manage marketing design and development at YDesign Group in California, as
+          both a leader and an individual contributor. When I'm not in a browser, I'm usually
+          playing video games or working on music.
         </p>
         <div className="button button--below">
           <a href="#get-in-touch" className="button__content">
             <span className="button__label">Get in Touch</span>
           </a>
         </div>
-        {/* <button className="button">
-          <div className="button__content">
-            <span className="button__label">Get in Touch</span>
-          </div>
-        </button> */}
       </div>
     </section>
 

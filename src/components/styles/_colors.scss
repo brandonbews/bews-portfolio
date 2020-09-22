@@ -12,7 +12,7 @@
   --colorGrayDark: hsl(222, 10%, 32%);
   --colorGray: hsl(221, 10%, 48%);
   --colorGrayLight: hsl(222, 10%, 60%);
-  --colorGrayXlight: hsl(225, 10%, 76%);
+  --colorGrayXLight: hsl(225, 10%, 76%);
 
   /* Primary Colors */
   --colorBlueLight: hsl(184, 93%, 69%);
@@ -58,9 +58,10 @@
   /* Tag Pills */
   --colorTagPillsBg: var(--colorGrayDark);
   --colorTagPillsText: var(--colorWhite);
+  --colorTagPillsBgArticle: var(--colorBlueDark);
 
   /* Forms */
-  --colorFormFieldStroke: var(--colorGrayXlight);
+  --colorFormFieldStroke: var(--colorGrayXLight);
   --colorFormFieldStroke--night: var(--colorGrayDark);
   --colorFormLabels: var(--colorGrayDark);
   --colorFormLabels--night: var(--colorGrayXLight);

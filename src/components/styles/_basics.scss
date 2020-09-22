@@ -19,6 +19,7 @@ html {
 .site-wrapper {
   background-color: var(--colorFarBackground);
   padding: var(--paddingGlobalWrap);
+  color: var(--colorTextMain);
 }
 
 .site-wrapper__content {
@@ -28,6 +29,7 @@ html {
   color: var(--colorTextMain);
   margin: auto;
   max-width: var(--globalMaxWidth);
+  overflow: hidden;
 }
 
 a,
