@@ -1,0 +1,34 @@
+.footer__social {
+  margin: var(--spacer5) 0 var(--spacer4) 0;
+}
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+.social-list__item {
+  padding: var(--spacer2);
+  @include screen-xl {
+    padding: var(--spacer3);
+  }
+  font-size: 0;
+  .svg-inline--fa {
+    width: var(--spacer5);
+    @include screen-xl {
+      width: var(--spacer6);
+    }
+    height: auto;
+    path {
+      fill: var(--colorFooterText);
+    }
+  }
+}
+.footer__copyright {
+  @include uiFont(2);
+  @include screen-xl {
+    @include uiFont(3);
+  }
+  color: var(--colorFooterText);
+  text-align: center;
+  font-weight: var(--fontWeightNormal);
+  margin-bottom: var(--spacer4);
+}
