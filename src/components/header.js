@@ -46,7 +46,7 @@ const Header = ({ siteTitle }) => {
       <header className="site-header" ref={siteHeader}>
         <div className="site-header__identity">
           <div className="site-header__logo">
-            <Link href="/">
+            <Link href="/#">
               <Logo />
             </Link>
           </div>

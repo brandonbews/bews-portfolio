@@ -136,6 +136,7 @@
 /*PORTFOLIO SECTION*/
 .section--portfolio {
   z-index: 1;
+  padding-top: var(--spacer10);
   @include screen-lg {
     margin-top: var(--spacer8);
   }
@@ -143,6 +144,10 @@
 
 /* CONTACT */
 .section--contact {
+  padding-top: var(--spacer10);
+  @include screen-xl {
+    padding-top: var(--spacer11);
+  }
   position: relative;
   z-index: 0;
   &:after {

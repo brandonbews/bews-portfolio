@@ -5,7 +5,7 @@ $snappy-transition: 0.05s ease-in-out;
 html {
   font-size: 16px;
   background-color: var(--colorFarBackground);
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth; // Creates weird page transitions with react.
 
   /* Add baseline transition */
   * {
