@@ -20,8 +20,8 @@ export default function PortfolioList() {
               featured_image_alt_text
               featured_image {
                 childImageSharp {
-                  fluid(maxWidth: 800) {
-                    ...GatsbyImageSharpFluid
+                  fluid(maxWidth: 1400) {
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }

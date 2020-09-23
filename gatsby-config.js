@@ -30,7 +30,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1100,
+              maxWidth: 1400,
               quality: 60,
               withWebp: true,
               showCaptions: true,
@@ -53,7 +53,14 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        toFormat: 'WEBP',
+        stripMetadata: true,
+        defaultQuality: 80,
+      },
+    },
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-fontawesome-css`,
   ],
