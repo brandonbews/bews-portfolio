@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `brandon-bews-portfolio`,
-    description: `This is my personal portfolio`,
+    title: `Brandon Bews`,
+    description: `My name is Brandon Bews. I'm a designer and front end developer. Welcome to my handbuilt home on the web.`,
     author: `@brandonbews`,
+    image: `images/featured-image.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -38,7 +39,19 @@ module.exports = {
         ],
       },
     },
-    // `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Brandon Bews`,
+        short_name: `Bews`,
+        start_url: `/`,
+        background_color: `#1E2025`,
+        theme_color: `#1E2025`,
+        display: `minimal-ui`,
+        icon: `src/images/icon.svg`,
+      },
+    },
+    `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-preload-fonts`,

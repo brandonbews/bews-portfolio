@@ -4,6 +4,8 @@ import Layout from '../components/layout'
 
 import { graphql } from 'gatsby'
 
+import SEO from '../components/seo'
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
@@ -21,6 +23,7 @@ export default function Template({
   ))
   return (
     <Layout>
+      <SEO title={frontmatter.title} />
       <div className="portfolio-article">
         <article className="portfolio-article__content">
           <h1>{frontmatter.title}</h1>
