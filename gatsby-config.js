@@ -3,7 +3,7 @@ module.exports = {
     title: `Brandon Bews`,
     description: `My name is Brandon Bews. I'm a designer and front end developer. Welcome to my handbuilt home on the web.`,
     author: `@brandonbews`,
-    image: `images/featured-image.png`,
+    image: `/images/featured-image.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
