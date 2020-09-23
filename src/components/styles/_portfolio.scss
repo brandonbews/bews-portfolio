@@ -29,6 +29,7 @@
   transform: translateX(-50%);
   box-shadow: var(--shadowBoxCard);
   padding: var(--spacer4);
+  padding-bottom: var(--spacer2);
   width: calc(100% - var(--spacer4));
   bottom: calc(var(--spacer4) / 2);
   @include screen-sm {
@@ -37,6 +38,7 @@
   }
   @include screen-lg {
     padding: var(--spacer5);
+    padding-bottom: var(--spacer4);
   }
 }
 .portfolio-project__name {
@@ -57,6 +59,7 @@
 
 .portfolio-project__skills {
   display: flex;
+  flex-wrap: wrap;
 }
 .portfolio-project__skill {
   font-size: 0;
@@ -66,6 +69,7 @@
   border-radius: 100rem;
   padding: var(--spacer1) var(--spacer2);
   margin-right: var(--spacer2);
+  margin-bottom: var(--spacer2);
 }
 .portfolio-project__skill-content {
   @include uiFont(1);
@@ -152,6 +156,7 @@
 }
 .portfolio-article__pills {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: var(--spacer6);
 }
 .portfolio-article__pill {

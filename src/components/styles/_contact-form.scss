@@ -4,7 +4,7 @@
   background-color: var(--colorBackground);
   border: 2px solid var(--colorFormFieldStroke);
   border-radius: var(--radiusBase);
-  padding: var(--spacer4) var(--spacer5);
+  padding: var(--spacer2) var(--spacer3);
   margin-bottom: var(--spacer5);
   input,
   textarea {
@@ -15,16 +15,29 @@
     color: var(--colorFormValues);
     border-radius: var(--radiusBase);
     width: 100%;
+    padding: var(--spacer2) var(--spacer4);
+    position: relative;
+    z-index: 2;
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 60px var(--colorFormAutofillBg) inset !important;
+      background-clip: content-box !important;
+      background-color: var(--colorFormAutofillBg) !important;
+      -webkit-text-fill-color: var(--colorFormValues) !important;
+    }
   }
   label {
     position: absolute;
     top: -1.1rem;
     left: 0;
     background-color: var(--colorBackground);
-    margin-left: var(--spacer4);
+    margin-left: var(--spacer3);
     font-size: 0;
     color: var(--colorFormLabels);
     padding: var(--spacer2);
+    z-index: 1;
   }
 }
 .contract-form__field-label {
