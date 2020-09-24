@@ -1,7 +1,7 @@
 ---
 slug: '/portfolio/test-project'
 date: '2020-09-01'
-title: 'Marketing DEsign System'
+title: 'Marketing Design System'
 entity: 'YLighting.com'
 skills: ['UX', 'Visual Design', 'Dev', 'Testing']
 tools: ['Figma', 'HTML', 'CSS', 'JS']
