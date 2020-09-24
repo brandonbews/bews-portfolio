@@ -1,13 +1,13 @@
 ---
-slug: '/portfolio/test-project'
+slug: '/portfolio/marketing-design-system'
 date: '2020-09-01'
 title: 'Marketing Design System'
 entity: 'YLighting.com'
 skills: ['UX', 'Visual Design', 'Dev', 'Testing']
 tools: ['Figma', 'HTML', 'CSS', 'JS']
 priority: 1
-featured-image: 'marketing-design-system-banner.png'
-featured-image-alt-text: 'This is an image of project 1'
+featured-image: 'mrktng-system-banner.png'
+featured-image-alt-text: 'A desktop and a mobile mockup.'
 ---
 
 ![Test Body Image](yl-hpredesign-3-hi-fidelity.jpg)
