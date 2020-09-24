@@ -1,12 +1,12 @@
 ---
 slug: '/portfolio/test-project'
 date: '2020-09-01'
-title: 'Homepage Redesign'
+title: 'Marketing DEsign System'
 entity: 'YLighting.com'
-skills: ['UX', 'Visual Design', 'Dev', 'AB Testing']
+skills: ['UX', 'Visual Design', 'Dev', 'Testing']
 tools: ['Figma', 'HTML', 'CSS', 'JS']
 priority: 1
-featured-image: 'portfolio-car-bg.png'
+featured-image: 'marketing-design-system-banner.png'
 featured-image-alt-text: 'This is an image of project 1'
 ---
 
