@@ -39,8 +39,10 @@
     --colorFormValues: var(--colorFormValues--night);
     --colorFormAutofillBg: var(--colorFormAutofillBg--night);
 
-    // Add a text shadow to large breakpoint in intro header
+    //
+    // Add a text shadow to large breakpoint in intro header for legibility
     // The colors here are manual to manage the alpha channel
+    //
     .intro-content {
       h1,
       h2,

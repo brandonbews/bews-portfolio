@@ -167,6 +167,7 @@
   border-radius: 100rem;
   padding: var(--spacer1) var(--spacer2);
   margin-right: var(--spacer2);
+  margin-bottom: var(--spacer2);
   @include screen-sm {
     padding: var(--spacer2) var(--spacer4);
     margin-right: var(--spacer4);

@@ -2,50 +2,78 @@
 slug: '/portfolio/marketing-design-system'
 date: '2020-09-01'
 title: 'Marketing Design System'
-entity: 'YLighting.com'
-skills: ['UX', 'Visual Design', 'Dev', 'Testing']
-tools: ['Figma', 'HTML', 'CSS', 'JS']
+entity: 'YDesign Group'
+skills: ['UX', 'UI', 'Visual Design', 'Dev']
+tools: ['Figma', 'HTML', 'CSS', 'SCSS', 'BEM', 'JS', 'Grunt']
 priority: 1
 featured-image: 'mrktng-system-banner.png'
-featured-image-alt-text: 'A desktop and a mobile mockup.'
+featured-image-alt-text: 'A desktop and a mobile mockup of the homepage of a website.'
 ---
 
 ![Test Body Image](yl-hpredesign-3-hi-fidelity.jpg)
 
-When the YDesign Group design team and I set out to redesign the YLighting.com homepage, we had a few goals in mind. First, we wanted to deliver a more engaging homepage experience for our users across mobile and desktop. Second, we wanted to create a design system with standardized and reusable components that we could use site-wide. Finally, this new system needed to be easy to use. Designers and marketing planners needed to be able to pull components off the shelf and use them in production with confidence.
+IMAGE of several templates
 
-## Wireframes
+As a small team, serving two ecommerce brands, YDesign Group's designers produce an impressive amount of deliverables on a daily basis. Any given week can be overflowing with homepages, marketing emails, landing pages, online marketing assets, inspirational articles, and more. In addition to these day-to-day duties, the team manages to support many long term projects, including new templates, UI and UX projects, and others. While attainable on an average week, producing work at a high volume across a team of designers, presented challenges for consistency, efficiency, and flexibility.
 
-![Test Body Image](test-image.png)
+An asset might be created for a homepage by one designer and then remade for an email or landing page by a different designer. This generated unecessary rework and made it harder to achieve consistency across deliverbales. Often, multiple new templates would be developed in parallel, employing different patterns and markup. Eventually, we found ourselves in a situation where many templates were bespoke, with no possible code reuse between them.
 
-One thing I knew I wanted to do with this redesign was take advantage of the additional real estate larger screens afforded me. By expanding outside of YLighting's typical page-width, I hoped to showcase the fantastic imagery we often had at our disposal while making room for more editorial content.
+IMAGE of sale landing banner highlighted on homepage, sale landing and promotions page
 
-![Test Body Image](test-image.png)
+To remedy these issues, we set out to create a system of reuseable marketing components, informed by a series of carefully considered design decisions. Further, these components would share design specifications with our other channels, enabling us to reuse more of our work and onboard new or freelance designers faster.This design system would be part of multi-pronged approach involving a brand refresh, new brand standards, and a system that would pull both together into a toolkit for YLighting's marketing desigers.
 
-One thing I knew I wanted to do with this redesign was take advantage of the additional real estate larger screens afforded me. By expanding outside of YLighting's typical page-width, I hoped to showcase the fantastic imagery we often had at our disposal while making room for more editorial content.
+## Design
 
-## Hi-Fidelity Mockups
+IMAGE of wireframe cross sections showing various components
 
-![Test Body Image](yl-hpredesign-3-hi-fidelity.jpg)
+As the front door to our site experience, the homepage was identified as the perfect starting point for this project. Through that design process, I was able to establish a grid, typography system, standardized spacing values, and a series of baseline components that could be reused for other templates.
 
-After several iterations, we landed on a more open feel, relying on layout and spacing to create a hierarchy and rhythm. Former iterations of the homepage relied on boxes and borders to separate ideas. I felt that minimizing visual noise made for a design that was easier to digest at a glance, and felt like it was meant to be consumed as one cohesive piece.
+### Typography
 
-- This is my first item
-- And now a second item
-- Maybe a third item
+IMAGE of type hierarchy
 
-Achieving a homepage system that can feel uniquely crafted, while also being much easier to produce and plan week to week, was a big a challenge. In the end, I think we came away with a design foundation that achieved our visual goals and can be easily expanded over time.
+To establish a more consistent vertical rhythm, and improve the overall consistency of our templates, I created a standardized type system that would inform all of the marketing teams designs going forward. First, I established a base font size of 16px from which we could derive the rest of our font sizes. From there, multiplying by a chosen type scale (1.25) would give me a standardized set of 10 font sizes to work with. I then assigned permanent line-height values for headlines (1.25x) and body copy (1.5), that would ensure our brand font (Futura PT) was always used consistenly and legibly.
+
+### Grid and Spacing
+
+IMAGE of spacing values and grid
+
+Similar to our type system, I also created a standardized set of modular spacing values, paired with a 12-column grid system. By limiting the amount of spacing values available to our designers, not only would we be able to design faster, but with greater consistency, as well. I'm a big proponent of setting a few thoughtful base values and multipliers early on. Then, I can let math do the the work of maintaining a visually pleasing vertical rhythm, and consitent look and feel.
 
 ## Development
 
-In addition to being responsible for all of the design in this project, I also completed all of the necessary development work to move the new system into production. To summarize the technologies employed, the template was created as a series of interchangeable components (primary, two-wide, text block, category navigation, etc.) using BEM (Block Element Modifier) to organize the CSS. All CSS was pre-processed using Scss, autoprefixed and compressed using Grunt, and version controlled using Git.
+Being on a small team, I often take on a broad range of responsibilities. In addition to acting as the principle designer on marketing design projects, one of my core responsibilites is front end development for new designs produced by the design team. For this project, all of the elements created would ultimately be used by multiple designers and business users, so it was important that any markup was clear and easy to use.
 
-Because the system is built using components, any homepage element can be used on its own anywhere else on the site. This includes a custom flex-box grid, type system, and spacing system.
+### Technologies
 
-## Results
+Historically, YLighting's templates and pieces of content have existed as chunks of HTML and CSS that are manually maintained through open text fields. Over time, this presented challenges in terms of version control, content management, and maintainability. One of my core goals for this project was to begin the process of adding all of the marketing team's code into a central git repository. I also wanted to create documentation capturing the markup and usage for each of our new elements.
 
-Initially, I published this new homepage design as part of an A/B test, running alongside the old template with the same promotions and content. Once I verified that user engagement and revenue were comparable at minimum, I deployed the new template on its own.
+IMAGE of a single components markup
 
-### An Extra Headline
+This project was designed in Figma and the bulk of the development was in CSS, using Scss and the BEM methodology. Because we wanted this system to be relatively compact and light, it was also important that I didn't use an added framework, like Bootstrap. I used Grunt to compile, minify, and autoprefix my Scss, which was all namespaced with a wrapper class to ensure that these components could safely coexist with new and old content across the site. Finally, Notion was used to catalog all of the components, usage, markup, and relevant screenshots.
 
-Comparing average homepage engagement (% of homepage visitors that engaged with a piece of homepage content) in the month preceding launch and the month after, we saw an average lift of 62%, with a 38% lift on mobile devices. While I'm unable to control for the differences in messaging during those time periods, those results are a great initial indicator. Even better, the modular nature of the homepage will allow for more rapid and detailed testing moving forward.
+### Type, Grid, Color and Spacing System
+
+IMAGE of type system in code
+
+For this project, it was important that all of the resulting font sizes, spacing values, media queries, and custom flexbox grid were represented as easy to use variables and mix-ins. That way, any new component or feature could easily pickup the core elements of our brand, with minimal extra tweaking from a deisgner or developer.
+
+Image of grid system
+
+Most importantly, our grid, typography, and spacing system were all tied back to the same base value (1em at 16px), this would eventually make responsive adjustments, or broad tweaks to the overall look and feel much easier to execute.
+
+## Documentation
+
+IMAGE of component documentation (create this from YL docs) (more explanatory piece)
+
+The work that goes into designing and develolping a system like this is only as good as the documentation that goes along with it. For me, documentation should be strong enough that a savvy business user could make use of a given component in a pinch. Because YLighting's marketing designs aren't overly granular in scope, it was possible for me to capture the various parts of the whole as larger, more complete pieces. From an atomic design perspective, this would be akin to only documenting relevant organisms, and leaving atoms and molecules abstracted away below the surface.
+
+IMAGE of component documentation (create this from YL docs)
+
+## Outcomes
+
+While much of this system, and its advantages, will be slowly rolled out over time, it has been successfully launched on several templates across YLighting. The most immediate outcome from this work was a dramatic increase in productivity. After applying a similarly programatic approach to YLighting's email program, one designer is now able take on the production needs of a demanding email program and all of our site marketing efforts on their own. At one point, that workload had required two full time designers, with occasional additional support from a freelancer.
+
+IMAGE of all templates
+
+This new system didn'tm just increase productivity for our production work. By building a systematic foundation for our marketing pages, we were able to create new experiences and iterate on existing ones much faster and with much stronger consistency. What started with a homepage redesign, quickly became a sale landing experience redesign, a new inspirational content hub, and a host of other tempaltes in the pipeline.
