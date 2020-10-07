@@ -16,7 +16,7 @@ As a small team, serving two e-commerce brands, YDesign Group's designers produc
 
 An asset might be created for a homepage by one designer and then remade for an email or landing page by a different designer. This generated unnecessary rework and made it harder to achieve consistency across deliverables. Often, multiple new templates would be developed in parallel, employing different patterns and markup. Eventually, we found ourselves in a situation where many templates were bespoke, with no possible code reuse between them.
 
-![The same component appearing in multiple different templates](2-Sale-Banner-All-Templates.png 'The same component could be resused across templates, saving time for designers.')
+![The same component appearing in multiple different templates](2-Sale-Banner-All-Templates.png 'The same component could be reused across templates, saving time for designers.')
 
 To remedy these issues, we set out to create a system of reusable marketing components, informed by a series of carefully considered design decisions. Further, these components would share design specifications with our other channels, enabling us to reuse more of our work and onboard new, or freelance designers faster. This design system would be part of a multi-pronged approach, involving a brand refresh, new brand standards, and a system that would pull both together into a toolkit for YLighting's marketing designers.
 
@@ -30,7 +30,7 @@ As the front door to our site experience, the homepage was identified as the per
 
 ![A series font sizes on top of eachother](4-Type-Hierachy.png)
 
-To establish a more consistent vertical rhythm, and improve the overall consistency of our templates, I created a standardized type system that would inform all of the marketing team's designs going forward. First, I established a base font size of 16px from which we could derive the rest of our font sizes. From there, multiplying by a chosen type scale (1.25) would give me a standardized set of 10 font sizes to work with. I then assigned permanent line-height values for headlines (1.25x) and body copy (1.5), that would ensure our brand font (Futura PT) was always used consistently and legibly.
+To establish a more consistent vertical rhythm, and improve the overall consistency of our templates, I created a standardized type system that would inform all of the marketing team's designs going forward. First, I established a base font size of 16px from which we could derive the rest of our font sizes. From there, multiplying by a chosen type scale (1.25) would give me a standardized set of 10 font sizes to work with. I then assigned permanent line-height values for headlines (1.25) and body copy (1.5), that would ensure our brand font (Futura PT) was always used consistently and legibly.
 
 ### Grid and Spacing
 
@@ -56,7 +56,7 @@ This project was designed in Figma and the bulk of the development was in CSS, u
 
 For this project, it was important that all of the resulting font sizes, spacing values, media queries, and custom flexbox grid were represented as easy to use variables and mix-ins. That way, any new component or feature could easily pickup the core elements of our brand, with minimal extra tweaking from a designer or developer.
 
-![Various Scss code snippets of the grid system](8-Grid-System-Code.png 'Creating my own grid system allowed me to only serve code for the tools we needed and nothing else.')
+![Various Scss code snippets of the grid system](8-Grid-System-Code.png 'Creating my own grid system ensusred that I would only serve code for the tools we needed and nothing else.')
 
 Most importantly, our grid, typography, and spacing system were all tied back to the same base value (1em at 16px), this would eventually make responsive adjustments, or broad tweaks to the overall look and feel much easier to execute.
 

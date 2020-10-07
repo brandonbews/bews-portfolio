@@ -58,9 +58,9 @@ Our tests demonstrated a very clear uptick in user engagement with the new homep
 
 ### Testing a New Strategy
 
-Our historical homepage strategy required many interlocking homepage configurations, with categories, brands or sales coming up and down almost daily. This created a lot of extra work, and a potential for errors, that we suspected was unnecessary. We had alo formed a hypothesis that our customer's goals weren't primarily sale-oriented.
+Our historical homepage strategy required many interlocking homepage configurations, with categories, brands or sales coming up and down almost daily. This created a lot of extra work, and potential for errors, that we suspected was unnecessary. We had also formed a hypothesis that our customer's goals weren't primarily sale-oriented.
 
-For this test, we compared our newly refreshed homepage aesthetic, with a version that folded in our new homepage strategy. The variation would deemphasize sale messaging, making the homepage more evergreen and easier to maintain, and add all of the new components we had created as part of this redesign. For the hero, we would also lead with a brand statement, instead of a sale message.
+For this test, we compared our newly refreshed homepage aesthetic with a version that folded in our new homepage strategy. The variation would deemphasize sale messaging, make the homepage more evergreen and easier to maintain, and add all of the new components we had created as part of this redesign. For the hero, we would also lead with a brand statement, instead of a sale message.
 
 Despite similar performance, we ultimately saw a small drop in revenue per customer with our new homepage design. On further analysis, we realized that our non-sale hero accounted for a massive drop in engagement between the two versions, while the more evergreen messaging performed quite well as a user moved down the page.
 
