@@ -114,6 +114,7 @@
     font-style: italic;
     color: var(--colorCardClient);
     text-align: center;
+    line-height: var(--titleLineHeight);
   }
   .gatsby-resp-image-background-image {
     border-radius: var(--radiusBase);
@@ -179,4 +180,8 @@
 }
 .portfolio-article__pill--skill {
   background-color: var(--colorTagPillsBgArticle);
+}
+
+.gatsby-resp-image-image {
+  background-color: var(--colorGrayDark);
 }

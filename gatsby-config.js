@@ -33,7 +33,8 @@ module.exports = {
               maxWidth: 1400,
               quality: 60,
               withWebp: true,
-              showCaptions: true,
+              showCaptions: ['title'],
+              backgroundColor: '#494E5A',
             },
           },
         ],
@@ -51,7 +52,6 @@ module.exports = {
         icon: `src/images/icon.svg`,
       },
     },
-    `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
