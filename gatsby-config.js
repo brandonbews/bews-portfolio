@@ -6,6 +6,7 @@ module.exports = {
     image: `/images/featured-image.png`,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
