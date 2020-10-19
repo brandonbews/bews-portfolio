@@ -26,7 +26,7 @@ There were several key opportunities that guided the early design process. First
 
 The second opportunity we identified was presenting more of YLighting's own brand story, values, and differentiators. The homepage was often ripe with content about sales happening now, but relatively light on content that spoke to the brand itself, and why a user could feel confident they'd found the right place to shop for high-end modern lighting.
 
-### Hi-Fidelity Mockups
+### High-Fidelity Mockups
 
 ![A variety of hi-fidelity options for the homepage](4-HP-Hi-Fidelity-Multiple.png 'One wireframe informed many visual design and UI options.')
 
