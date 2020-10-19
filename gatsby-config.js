@@ -10,14 +10,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        typekit: {
-          id: 'xzm6jku',
-        },
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `portfolio-pieces`,
@@ -62,7 +54,6 @@ module.exports = {
         defaultQuality: 80,
       },
     },
-    `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-fontawesome-css`,
   ],
 }

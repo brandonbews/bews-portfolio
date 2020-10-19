@@ -1,3 +1,30 @@
+@font-face {
+  font-family: 'B Font';
+  src: url('/fonts/sof-sub-reg.woff2') format('woff2'),
+    url('/fonts/sof-sub-reg.woff') format('woff');
+}
+@font-face {
+  font-family: 'B Font';
+  src: url('/fonts/sof-sub-bld.woff2') format('woff2'),
+    url('/fonts/sof-sub-bld.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'B Font';
+  src: url('/fonts/sof-sub-blk.woff2') format('woff2'),
+    url('/fonts/sof-sub-blk.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'B Font';
+  src: url('/fonts/sof-sub-reg-ital.woff2') format('woff2'),
+    url('/fonts/sof-sub-reg-ital.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
 // Create Font Sizes
 $font-sizes: 11; //How many font sizes to produce
 $base-font-position: 3; //Position that should be the base font size. This is useful for creating sizes below the base size.
@@ -13,7 +40,7 @@ $base-font-position: 3; //Position that should be the base font size. This is us
   ////////////////////////
 
   // Font Family
-  --fontFamilyMain: 'sofia-pro', Helvetica, sans-serif;
+  --fontFamilyMain: 'B Font', Helvetica, sans-serif;
 
   // Font Size
   --fontSizeBase: 1.125rem;
@@ -26,7 +53,7 @@ $base-font-position: 3; //Position that should be the base font size. This is us
 
   // UI Line Height Normalize
   // This is a bottom padding that can be tweaked on a font by font basis to better optically center capitalized UI copy within a line height
-  --uiFontUpperNormalize: 0.13em;
+  --uiFontUpperNormalize: 0;
 
   ////////////////////////
   // Create Font Sizes
