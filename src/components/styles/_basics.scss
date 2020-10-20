@@ -9,8 +9,7 @@ html {
 
   /* Add baseline transition */
   * {
-    transition: font-size $baseline-transition, height $baseline-transition,
-      color $baseline-transition, background-color $baseline-transition,
+    transition: color $baseline-transition, background-color $baseline-transition,
       border-color $baseline-transition, box-shadow $baseline-transition;
     -moz-osx-font-smoothing: none;
   }
