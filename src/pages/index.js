@@ -19,9 +19,9 @@ const IndexPage = () => (
           the web.
         </p>
         <p>
-          I currently manage marketing design and development at YDesign Group in California, as
-          both a leader and an individual contributor. When I'm not in a browser, I'm usually
-          playing video games or working on music.
+          I currently work in design and development as part of the engineering team at Sparkart in
+          California. When I'm not in a browser, I'm usually playing video games or working on
+          music.
         </p>
         <div className="button button--below">
           <a href="#get-in-touch" className="button__content">
